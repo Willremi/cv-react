@@ -18,7 +18,7 @@ const Navbar = () => {
     // }
 
     return (
-        <div className="mb-20">
+        <>
             <Disclosure as="nav" className="bg-nav-greenOp fixed w-full z-10 top-0">
                 {({ open }) => (
                     <>
@@ -87,7 +87,7 @@ const Navbar = () => {
                     </>
                 )}
             </Disclosure>
-        </div>
+        </>
     );
 };
 
