@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import rw from '../assets/images/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import PDF from '../assets/documents/cvVers2022.pdf';
 
 const Navbar = () => {
     const navigation = [
@@ -16,7 +17,7 @@ const Navbar = () => {
     // function classNames(...classes) {
     //     return classes.filter(Boolean).join(" ");
     // }
-
+    
     return (
         <>
             <Disclosure as="nav" className="bg-nav-greenOp fixed w-full z-10 top-0">
@@ -58,6 +59,7 @@ const Navbar = () => {
                                                     {item.name}
                                                 </Link>
                                             ))}
+                                            <a href={PDF} target="_blank" className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
                                         </div>
                                     </div>
                                 </div>
