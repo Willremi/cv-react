@@ -59,7 +59,7 @@ const Navbar = () => {
                                                     {item.name}
                                                 </Link>
                                             ))}
-                                            <a href={PDF} target="_blank" className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
+                                            <a href={PDF} target="_blank" rel="noreferrer" className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
                                         </div>
                                     </div>
                                 </div>

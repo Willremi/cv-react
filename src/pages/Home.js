@@ -44,13 +44,13 @@ const Home = () => {
             </div>
             
             <div className="z-20 mt-36 flex">
-                <a href="https://www.linkedin.com/in/willremi" target="_blank">
+                <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
                 <img src={Linkedin} alt="Twitter" className='w-12 md:w-14 md:h-14 justify-start mx-10 md:mx-28 bg-white rounded' />
                 </a>
-                <a href="https://twitter.com/RmiWill" target="_blank">
+                <a href="https://twitter.com/RmiWill" target="_blank" rel="noreferrer">
                 <img src={Twitter} alt="Twitter" className='w-12 md:w-14' />
                 </a>
-                <a href="https://github.com/Willremi" target="_blank">
+                <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
                 <img src={Github} alt="Twitter" className='w-12 h-12 md:w-14 md:h-14 mx-10 md:mx-28 bg-white rounded-full' />
                 </a>
             </div>
