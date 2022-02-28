@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import rw from '../assets/images/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import PDF from '../assets/documents/cvVers2022.pdf';
+import {saveAs} from "file-saver"; 
 
 const Navbar = () => {
     const navigation = [
@@ -17,6 +18,13 @@ const Navbar = () => {
     // function classNames(...classes) {
     //     return classes.filter(Boolean).join(" ");
     // }
+
+    const saveFile = () => {
+        saveAs(
+            PDF,
+            "cv.pdf"
+        )
+    }
     
     return (
         <>
@@ -59,11 +67,12 @@ const Navbar = () => {
                                                     {item.name}
                                                 </Link>
                                             ))}
-                                            <a href={PDF} target="_blank" rel="noreferrer" className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
+                                            <a onClick={saveFile} target="_blank" rel="noreferrer" className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
                                         </div>
                                     </div>
                                 </div>
 
+                            <a onClick={saveFile} target="_blank" rel="noreferrer" className="md:hidden text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</a>
                             </div>
                         </div>
 
