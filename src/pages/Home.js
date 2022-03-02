@@ -1,9 +1,9 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Remi from '../assets/images/remi.jpg';
-import Twitter from '../assets/images/twitter.png';
-import Linkedin from '../assets/images/linkedin.png';
-import Github from '../assets/images/github.png';
+import Twitter from '../assets/images/logos/twitter.png';
+import Linkedin from '../assets/images/logos/linkedin.png';
+import Github from '../assets/images/logos/github.png';
 
 const Home = () => {
     return <>

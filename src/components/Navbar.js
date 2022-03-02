@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import rw from '../assets/images/rw.png';
+import rw from '../assets/images/logos/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import PDF from '../assets/documents/cvVers2022.pdf';
 import {saveAs} from "file-saver"; 
@@ -10,7 +10,7 @@ const Navbar = () => {
     const navigation = [
         { name: 'Accueil', href: '/', current: false },
         { name: 'Compétences', href: '/competences', current: false },
-        { name: 'Portfolio', href: '/portfolio', current: false },
+        { name: 'Formations', href: '/formations', current: false },
         { name: 'Expériences professionnelles', href: '/experiences', current: false },
         { name: 'Contact', href: '/contact', current: false },
     ]
@@ -22,7 +22,7 @@ const Navbar = () => {
     const saveFile = () => {
         saveAs(
             PDF,
-            "cv.pdf"
+            "Rémi W - CV.pdf"
         )
     }
     

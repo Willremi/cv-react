@@ -6,7 +6,7 @@ const NotFound = () => {
     const saveFile = () => {
         saveAs(
             PDF,
-            "cv.pdf"
+            "CV.pdf"
         )
     }
 
