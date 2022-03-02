@@ -1,4 +1,4 @@
-const Competences = [
+const SkillsInfo = [
    {
        id: 1,
        name: "HTML 5",
@@ -23,53 +23,53 @@ const Competences = [
        image: require("../../assets/images/logos/bootstrap.png"),
        href: "http://www.reseau-to.fr/site/carte/index.html"
    },
+    {
+        id: 5,
+        name: "jQuery",
+        image: require("../../assets/images/logos/jquery.png"),
+        href: "https://github.com/Willremi/Groupe6/tree/master/jquery"
+    },
    {
-       id:5,
+       id:6,
        name: "React JS",
        image: require("../../assets/images/logos/react.png")
    },
    {
-       id:6,
+       id:7,
        name: "Tailwind CSS",
        image: require("../../assets/images/logos/tailwind.png")
    },
    {
-       id:7,
+       id:8,
        name: "PHP",
        image: require("../../assets/images/logos/php.png"),
        href: "https://github.com/Willremi/Groupe6/tree/master/PHP"
    },
    {
-       id:8,
+       id:9,
        name: "Node JS",
        image: require("../../assets/images/logos/node.png")
    },
    {
-       id:9,
+       id:10,
        name: "MySQL",
        image: require("../../assets/images/logos/mysql.png")
    },
    {
-       id:10,
+       id:11,
        name: "MongoDB",
        image: require("../../assets/images/logos/mongodb.png")
    },
    {
-       id:11,
+       id:12,
        name: "Symfony",
        image: require("../../assets/images/logos/symfony.png"),
        href: "https://github.com/Willremi/Groupe6/tree/master/symfony"
    },
    {
-       id:12,
+       id:13,
        name: "Sass",
        image: require("../../assets/images/logos/sass.png")
-   },
-   {
-       id:13,
-       name: "jQuery",
-       image: require("../../assets/images/logos/jquery.png"),
-       href: "https://github.com/Willremi/Groupe6/tree/master/jquery"
    },
    {
        id:14,
@@ -80,4 +80,4 @@ const Competences = [
    
 ];
 
-export default Competences;
+export default SkillsInfo;
