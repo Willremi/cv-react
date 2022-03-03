@@ -45,13 +45,13 @@ const Home = () => {
             
             <div className="z-20 mt-36 sm:mt-48 xl:mt-40 flex fixed">
                 <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
-                <img src={Linkedin} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-14 md:h-14 justify-start mx-10 md:mx-28 bg-white rounded' />
+                <img src={Linkedin} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 mx-10 sm:mx-20 md:mx-28 bg-white rounded' />
                 </a>
                 <a href="https://twitter.com/RmiWill" target="_blank" rel="noreferrer">
-                <img src={Twitter} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-14' />
+                <img src={Twitter} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16' />
                 </a>
                 <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                <img src={Github} alt="Twitter" className='w-12 h-12 sm:w-20 sm:h-20 md:w-14 md:h-14 mx-10 md:mx-28 bg-white rounded-full' />
+                <img src={Github} alt="Twitter" className='w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 mx-10 sm:mx-20 md:mx-28 bg-white rounded-full' />
                 </a>
             </div>
         </div>
