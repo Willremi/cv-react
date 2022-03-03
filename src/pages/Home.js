@@ -7,16 +7,16 @@ import Github from '../assets/images/logos/github.png';
 
 const Home = () => {
     return <>
-        <div className="flex items-center justify-center mt-72 md:mt-80">
-            <div className='fixed z-20 mb-52'>
-                <img src={Remi} alt="" className='w-36 h-36 rounded-full' />
+        <div className="flex items-center justify-center h-screen sm:mt-14 md:mt-10 xl:mt-0">
+            <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-52'>
+                <img src={Remi} alt="" className='w-36 sm:w-56 md:w-52 xl:w-36 h-36 sm:h-56 md:h-52 xl:h-36 rounded-full' />
             </div>
 
-            <div className="bg-div-white rounded-lg border shadow-lg p-10 md:px-40 fixed z-10">
+            <div className="bg-div-white rounded-lg border shadow-lg p-10 sm:p-16 xl:p-12 sm:px-44 md:px-48 xl:px-48 fixed z-10">
                 <h1 className='text-black font-bold font-roboto'>Rémi Willebrouck</h1>
 
                 {/* typewriter */}
-                <div className="text-red-400 w-56 font-semibold">
+                <div className="text-red-400 w-56 sm:w-60 xl:w-72 font-semibold sm:text-lg xl:text-xl">
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter
@@ -43,15 +43,15 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className="z-20 mt-36 flex fixed">
+            <div className="z-20 mt-36 sm:mt-48 xl:mt-40 flex fixed">
                 <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
-                <img src={Linkedin} alt="Twitter" className='w-12 md:w-14 md:h-14 justify-start mx-10 md:mx-28 bg-white rounded' />
+                <img src={Linkedin} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-14 md:h-14 justify-start mx-10 md:mx-28 bg-white rounded' />
                 </a>
                 <a href="https://twitter.com/RmiWill" target="_blank" rel="noreferrer">
-                <img src={Twitter} alt="Twitter" className='w-12 md:w-14' />
+                <img src={Twitter} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-14' />
                 </a>
                 <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                <img src={Github} alt="Twitter" className='w-12 h-12 md:w-14 md:h-14 mx-10 md:mx-28 bg-white rounded-full' />
+                <img src={Github} alt="Twitter" className='w-12 h-12 sm:w-20 sm:h-20 md:w-14 md:h-14 mx-10 md:mx-28 bg-white rounded-full' />
                 </a>
             </div>
         </div>
