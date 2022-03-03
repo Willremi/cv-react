@@ -7,7 +7,7 @@ import Github from '../assets/images/logos/github.png';
 
 const Home = () => {
     return <>
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center mt-72 md:mt-80">
             <div className='fixed z-20 mb-52'>
                 <img src={Remi} alt="" className='w-36 h-36 rounded-full' />
             </div>
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className="z-20 mt-36 flex">
+            <div className="z-20 mt-36 flex fixed">
                 <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
                 <img src={Linkedin} alt="Twitter" className='w-12 md:w-14 md:h-14 justify-start mx-10 md:mx-28 bg-white rounded' />
                 </a>
