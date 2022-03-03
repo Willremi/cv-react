@@ -39,7 +39,10 @@ const Knowledges = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="border bg-div-white rounded-lg mt-4 mx-5 p-4  max-h-48">
+                    {/* 
+                    Faire un TypeWriter
+                    
+                    <div className="border bg-div-white rounded-lg mt-4 mx-5 p-4  max-h-48">
                         <h2 className='text-center mb-2 pb-2 text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                         <p>
                         Je suis un développeur web qui aime la simplicité et l'élégance. Je travaille en HTML5 et en CSS3 afin de créer des sites web modernes. J'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
