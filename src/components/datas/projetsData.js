@@ -1,28 +1,19 @@
 const Projets = [
     {
         id: 1,
-        title: "Course au jouet",
-        dates: "2021 - 2022",
-        description: "Site e-commerce de jouets",
-        image: require('../../assets/images/projets/caj.png'),
+        title: "Réseau T0",
+        dates: "2017 - en cours",
+        description: "Site regroupant les Théâtres de l'Opprimé en France et dans les autres pays",
+        image: require('../../assets/images/projets/RTo.png'),
         technos: [
             {
                 id:1,
-                title: "React JS"
+                title: "Wordpress"
             },
             {
                 id:2,
-                title: "Tailwind CSS"
-            },
-            {
-                id: 3,
-                title: "Node JS"
-            },
-            {
-                id: 4,
-                title: "MongoDB"
-            },
-
+                title: "CSS"
+            }
         ]
     },
     {
@@ -82,19 +73,28 @@ const Projets = [
     },
     {
         id: 4,
-        title: "Réseau T0",
-        dates: "2017 - en cours",
-        description: "Site regroupant les Théâtres de l'Opprimé en France et dans les autres pays",
-        image: require('../../assets/images/projets/RTo.png'),
+        title: "Course au jouet",
+        dates: "2021 - 2022",
+        description: "Site e-commerce de jouets",
+        image: require('../../assets/images/projets/caj.png'),
         technos: [
             {
                 id:1,
-                title: "Wordpress"
+                title: "React JS"
             },
             {
                 id:2,
-                title: "CSS"
-            }
+                title: "Tailwind CSS"
+            },
+            {
+                id: 3,
+                title: "Node JS"
+            },
+            {
+                id: 4,
+                title: "MongoDB"
+            },
+
         ]
     },
     

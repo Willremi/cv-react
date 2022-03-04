@@ -7,6 +7,9 @@ import Projets from '../components/datas/projetsData';
 
 const Knowledges = () => {
     // console.log(Projets);
+    Projets.sort(function(a, b){
+        return b.id - a.id;
+    });
 
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
