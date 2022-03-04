@@ -62,10 +62,10 @@ const Knowledges = () => {
                 </div>
                 <div className="border bg-div-white rounded-lg mx-5 xl:mx-36 mt-4 p-4">
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
-                    <div className="flex flex-wrap justify-around ">
+                    <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
                             <div className='text-center' key={item.id}>
-                                <h3 className='text-div-green pb-1'>{item.title}</h3>
+                                <h3 className='text-div-green py-1'>{item.title}</h3>
                                 <img src={item.image} alt={item.title} className="w-40" />
                                 <span className='text-div-red'>{item.dates}</span>
                             </div>
