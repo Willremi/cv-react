@@ -6,7 +6,7 @@ import debian from '../assets/images/logos/debian.png';
 import Projets from '../components/datas/projetsData';
 
 const Knowledges = () => {
-    // console.log(Projets);
+    // Tri d'apparition des projets;
     Projets.sort(function(a, b){
         return b.id - a.id;
     });
