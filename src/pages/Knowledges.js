@@ -3,8 +3,11 @@ import SkillsInfo from '../components/datas/competencesData';
 import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
+import Projets from '../components/datas/projetsData';
 
 const Knowledges = () => {
+    // console.log(Projets);
+
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
             {/* page Compétences */}
@@ -14,8 +17,10 @@ const Knowledges = () => {
                     <div className='flex flex-wrap justify-center'>
                         {SkillsInfo.map(item =>
                             <div className='w-16 md:w-24 text-center' key={item.id}>
-                                <img src={item.image} alt={item.name} />
-                                <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
+                                <a href={item.href} target='_blank' rel="noreferrer">
+                                    <img src={item.image} alt={item.name} />
+                                    <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
+                                </a>
                             </div>
                         )}
 
@@ -46,14 +51,23 @@ const Knowledges = () => {
                             <h2 className='text-center mb-2 text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                             <div className="m-1">
                                 <p className='font-roboto'>
-                                Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
+                                    Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="border bg-div-white rounded-lg mx-5 xl:mx-36 mt-4">
+                <div className="border bg-div-white rounded-lg mx-5 xl:mx-36 mt-4 p-4">
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
+                    <div className="flex flex-wrap justify-around ">
+                        {Projets.map(item =>
+                            <div className='text-center' key={item.id}>
+                                <h3 className='text-div-green pb-1'>{item.title}</h3>
+                                <img src={item.image} alt={item.title} className="w-40" />
+                                <span className='text-div-red'>{item.dates}</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
