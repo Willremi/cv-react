@@ -7,7 +7,7 @@ import Projets from '../components/datas/projetsData';
 
 const Knowledges = () => {
     // Tri d'apparition des projets;
-    Projets.sort(function(a, b){
+    Projets.sort(function (a, b) {
         return b.id - a.id;
     });
 
@@ -64,11 +64,13 @@ const Knowledges = () => {
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
                     <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
+                            <>
                             <div className='text-center' key={item.id}>
                                 <h3 className='text-div-green py-1'>{item.title}</h3>
                                 <img src={item.image} alt={item.title} className="w-40" />
                                 <span className='text-div-red'>{item.dates}</span>
                             </div>
+                            </>
                         )}
                     </div>
                 </div>
