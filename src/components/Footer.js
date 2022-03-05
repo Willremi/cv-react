@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
     const year = new Date().getFullYear();
-    const location = useLocation();
+    // const location = useLocation();
     // console.log('location', location.pathname);
 
     return (
