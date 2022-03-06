@@ -4,7 +4,16 @@ const Projets = [
         title: "Réseau T0",
         dates: "2017 - en cours",
         description: "Site regroupant les Théâtres de l'Opprimé en France et dans les autres pays",
-        image: require('../../assets/images/projets/RTo.png'),
+        images: [
+            {
+                id: 1,
+                src: require('../../assets/images/projets/RTo.png')
+            },
+            {
+                id: 2,
+                src: require('../../assets/images/projets/RTo1.png')
+            },
+        ],
         technos: [
             {
                 id:1,
@@ -21,7 +30,12 @@ const Projets = [
         title: "Rétro Série",
         dates: "2020 - 2021",
         description: "Site recensant les anciennes avant les années 2010",
-        image: require('../../assets/images/projets/RetroTv.png'),
+        images: [
+            {
+                id: 1,
+                src: require('../../assets/images/projets/RetroTv.png')
+            }
+        ],
         technos: [
             {
                 id:1,
@@ -51,7 +65,16 @@ const Projets = [
         title: "Carte interactive",
         dates: "2020",
         description: "Implantation des groupes adhérents du Réseau T0",
-        image: require('../../assets/images/projets/france.png'),
+        images: [
+            {
+                id: 1,
+                src: require('../../assets/images/projets/france.png')
+            },
+            {
+                id:2,
+                src: require('../../assets/images/projets/france1.png')
+            }
+        ],
         technos: [
             {
                 id:1,
@@ -75,8 +98,13 @@ const Projets = [
         id: 4,
         title: "Course au jouet",
         dates: "2021 - 2022",
-        description: "Site e-commerce de jouets",
-        image: require('../../assets/images/projets/caj.png'),
+        description: "Site e-commerce de ventes de jouets",
+        images: [
+            {
+                id:1,
+                src: require('../../assets/images/projets/caj.png')
+            }
+        ],
         technos: [
             {
                 id:1,

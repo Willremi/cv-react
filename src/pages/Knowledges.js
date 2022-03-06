@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SkillsInfo from '../components/datas/competencesData';
 import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
@@ -12,9 +12,10 @@ const Knowledges = () => {
         return b.id - a.id;
     });
 
-    function projetClick(e) {
-        console.log(e.target.id);
-    }
+    const [showModal, setShowModal] = useState(false);
+    const [modalData, setModalData] = useState(null);
+
+
 
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
@@ -72,19 +73,67 @@ const Knowledges = () => {
                         {Projets.map(item =>
                             <div className='text-center' key={item.id}>
                                 <h3 className='text-div-green underline py-1'>{item.title}</h3>
-                                
+
                                 {/* <ul className='flex justify-center mb-1'>
                                     {item.technos.map(elt => 
                                     <li className='text-xs mx-1' key={elt.id}>{elt.title}</li>
                                     )}
                                 </ul> */}
-                                <img src={item.image} alt={item.title} className="w-40 mx-auto" id={item.title} onClick={projetClick} />
-                                
+                                <img src={item.images[0].src} alt={item.title} className="w-40 mx-auto" id={item.title} onClick={() => {
+                                    setShowModal(true);
+                                    setModalData(item);
+                                }} />
+
                                 <span className='text-div-red'>{item.dates}</span>
                                 {/* <div className={`${item.id === 1 ? 'hidden' : 'xl:hidden flex justify-center mt-1'}`}>
                                         <Icon icon="bi:x-diamond-fill" color="#33658a" width="20" height="20" />
                                 </div> */}
-                                
+
+                                {showModal ? (
+                                    <>
+                                        <div
+                                            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                                            // onClick={() => setShowModal(false)}
+                                        >
+                                            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                                                {/*content*/}
+                                                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                                    {/*header*/}
+                                                    <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                                        <h2 className="font-semibold text-blue-500 font-roboto">
+                                                            {modalData.title}
+                                                        </h2>
+                                                    </div>
+                                                    {/*body*/}
+                                                    <div className="relative p-6 flex-auto">
+                                                        <p className="my-4 text-gray-800 text-lg leading-relaxed">
+                                                            {modalData.description}
+                                                        </p>
+                                                        <div className="flex justify-center">
+                                                        {modalData.technos.map(elt => 
+                                                        <div className="border-1 bg-red-400 mx-2" key={elt.id}>
+                                                        {elt.title}    
+                                                        </div>    
+                                                        )}
+                                                        </div>
+                                                    </div>
+                                                    {/*footer*/}
+                                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                                        <button
+                                                            className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                                            type="button"
+                                                            onClick={() => setShowModal(false)}
+                                                        >
+                                                            Close
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="opacity-25 fixed inset-0 z-40 bg-white"></div>
+                                    </>
+                                ) : null}
+
                             </div>
                         )}
                     </div>
