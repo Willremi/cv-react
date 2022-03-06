@@ -4,12 +4,17 @@ import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import Projets from '../components/datas/projetsData';
+// import { Icon } from '@iconify/react';
 
 const Knowledges = () => {
     // Tri d'apparition des projets;
     Projets.sort(function (a, b) {
         return b.id - a.id;
     });
+
+    function projetClick(e) {
+        console.log(e.target.id);
+    }
 
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
@@ -60,17 +65,27 @@ const Knowledges = () => {
                         </div>
                     </div>
                 </div>
+                {/* Projets */}
                 <div className="border bg-div-white rounded-lg mx-5 xl:mx-36 mt-4 p-4">
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
                     <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
-                            <>
                             <div className='text-center' key={item.id}>
-                                <h3 className='text-div-green py-1'>{item.title}</h3>
-                                <img src={item.image} alt={item.title} className="w-40" />
+                                <h3 className='text-div-green underline py-1'>{item.title}</h3>
+                                
+                                {/* <ul className='flex justify-center mb-1'>
+                                    {item.technos.map(elt => 
+                                    <li className='text-xs mx-1' key={elt.id}>{elt.title}</li>
+                                    )}
+                                </ul> */}
+                                <img src={item.image} alt={item.title} className="w-40 mx-auto" id={item.title} onClick={projetClick} />
+                                
                                 <span className='text-div-red'>{item.dates}</span>
+                                {/* <div className={`${item.id === 1 ? 'hidden' : 'xl:hidden flex justify-center mt-1'}`}>
+                                        <Icon icon="bi:x-diamond-fill" color="#33658a" width="20" height="20" />
+                                </div> */}
+                                
                             </div>
-                            </>
                         )}
                     </div>
                 </div>
