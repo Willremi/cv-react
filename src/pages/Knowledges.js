@@ -15,8 +15,6 @@ const Knowledges = () => {
     const [showModal, setShowModal] = useState(false);
     const [modalData, setModalData] = useState(null);
 
-
-
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
             {/* page Compétences */}
@@ -74,26 +72,18 @@ const Knowledges = () => {
                             <div className='text-center' key={item.id}>
                                 <h3 className='text-div-green underline py-1'>{item.title}</h3>
 
-                                {/* <ul className='flex justify-center mb-1'>
-                                    {item.technos.map(elt => 
-                                    <li className='text-xs mx-1' key={elt.id}>{elt.title}</li>
-                                    )}
-                                </ul> */}
                                 <img src={item.images[0].src} alt={item.title} className="w-40 mx-auto" id={item.title} onClick={() => {
                                     setShowModal(true);
                                     setModalData(item);
                                 }} />
 
                                 <span className='text-div-red'>{item.dates}</span>
-                                {/* <div className={`${item.id === 1 ? 'hidden' : 'xl:hidden flex justify-center mt-1'}`}>
-                                        <Icon icon="bi:x-diamond-fill" color="#33658a" width="20" height="20" />
-                                </div> */}
 
                                 {showModal ? (
                                     <>
                                         <div
                                             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-                                            // onClick={() => setShowModal(false)}
+                                        // onClick={() => setShowModal(false)}
                                         >
                                             <div className="relative w-auto my-6 mx-auto max-w-3xl">
                                                 {/*content*/}
@@ -110,11 +100,11 @@ const Knowledges = () => {
                                                             {modalData.description}
                                                         </p>
                                                         <div className="flex justify-center">
-                                                        {modalData.technos.map(elt => 
-                                                        <div className="border-1 bg-red-400 mx-2" key={elt.id}>
-                                                        {elt.title}    
-                                                        </div>    
-                                                        )}
+                                                            {modalData.technos.map(elt =>
+                                                                <div className="border-1 bg-violet-500 mx-2 p-2 rounded text-white" key={elt.id}>
+                                                                    {elt.title}
+                                                                </div>
+                                                            )}
                                                         </div>
                                                     </div>
                                                     {/*footer*/}
@@ -124,7 +114,7 @@ const Knowledges = () => {
                                                             type="button"
                                                             onClick={() => setShowModal(false)}
                                                         >
-                                                            Close
+                                                            Fermer la fenêtre
                                                         </button>
                                                     </div>
                                                 </div>
