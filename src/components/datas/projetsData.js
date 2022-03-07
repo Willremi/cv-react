@@ -17,11 +17,13 @@ const Projets = [
         technos: [
             {
                 id:1,
-                title: "Wordpress"
+                title: "Wordpress",
+                logo: require('../../assets/images/logos/wordpress.png')
             },
             {
                 id:2,
-                title: "CSS"
+                title: "CSS",
+                logo: require('../../assets/images/logos/css.png')
             }
         ]
     },
@@ -34,28 +36,37 @@ const Projets = [
             {
                 id: 1,
                 src: require('../../assets/images/projets/RetroTv.png')
-            }
+            },
+            {
+                id: 2,
+                src: require('../../assets/images/projets/RetroTv1.png')
+            },
         ],
         technos: [
             {
                 id:1,
-                title: "PHP"
+                title: "PHP",
+                logo: require('../../assets/images/logos/php.png')
             },
             {
                 id:2,
-                title: "CSS"
+                title: "CSS",
+                logo: require('../../assets/images/logos/css.png')
             },
             {
                 id:3,
-                title: "Bootstrap"
+                title: "Bootstrap",
+                logo: require('../../assets/images/logos/bootstrap.png')
             },
             {
                 id: 4,
-                title: "Javascript"
+                title: "Javascript",
+                logo: require('../../assets/images/logos/javascript.png')
             },
             {
                 id: 5,
-                title: "MySQL"
+                title: "MySQL",
+                logo: require('../../assets/images/logos/mysql.png')
             },
 
         ]
@@ -78,19 +89,23 @@ const Projets = [
         technos: [
             {
                 id:1,
-                title: "HTML"
+                title: "HTML",
+                logo: require('../../assets/images/logos/html.png')
             },
             {
                 id:2,
-                title: "CSS"
+                title: "CSS",
+                logo: require('../../assets/images/logos/css.png')
             },
             {
                 id:3,
-                title: "Bootstrap"
+                title: "Bootstrap",
+                logo: require('../../assets/images/logos/bootstrap.png')
             },
             {
                 id: 4,
-                title: "Javascript"
+                title: "Javascript",
+                logo: require('../../assets/images/logos/javascript.png')
             }
         ]
     },
@@ -103,24 +118,32 @@ const Projets = [
             {
                 id:1,
                 src: require('../../assets/images/projets/caj.png')
-            }
+            },
+            {
+                id:2,
+                src: require('../../assets/images/projets/caj1.png')
+            },
         ],
         technos: [
             {
                 id:1,
-                title: "React JS"
+                title: "React JS",
+                logo: require('../../assets/images/logos/react.png')
             },
             {
                 id:2,
-                title: "Tailwind CSS"
+                title: "Tailwind CSS",
+                logo: require('../../assets/images/logos/tailwind.png')
             },
             {
                 id: 3,
-                title: "Node JS"
+                title: "Node JS",
+                logo: require('../../assets/images/logos/node.png')
             },
             {
                 id: 4,
-                title: "MongoDB"
+                title: "MongoDB",
+                logo: require('../../assets/images/logos/mongodb.png')
             },
 
         ]

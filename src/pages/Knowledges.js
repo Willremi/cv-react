@@ -85,7 +85,7 @@ const Knowledges = () => {
                                             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                                         // onClick={() => setShowModal(false)}
                                         >
-                                            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                                            <div className="relative w-auto my-6 mx-2 max-w-3xl">
                                                 {/*content*/}
                                                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                                     {/*header*/}
@@ -95,16 +95,26 @@ const Knowledges = () => {
                                                         </h2>
                                                     </div>
                                                     {/*body*/}
-                                                    <div className="relative p-6 flex-auto">
-                                                        <p className="my-4 text-gray-800 text-lg leading-relaxed">
+                                                    <div className="relative px-6 p-4 flex-auto">
+                                                        <p className="my-2 text-gray-800 text-lg leading-relaxed">
                                                             {modalData.description}
                                                         </p>
                                                         <div className="flex justify-center">
                                                             {modalData.technos.map(elt =>
-                                                                <div className="border-1 bg-violet-500 mx-2 p-2 rounded text-white" key={elt.id}>
-                                                                    {elt.title}
+                                                                // <div className="border-1 bg-violet-500 mx-2 p-2 rounded text-white" key={elt.id}>
+                                                                //     {elt.title}
+                                                                // </div>
+                                                                <div key={elt.id}
+                                                                className="mx-2 px-2"
+                                                                >
+                                                                    <img src={elt.logo} alt={elt.title}
+                                                                    className="w-10 xl:w-12 h-auto"
+                                                                    />
                                                                 </div>
                                                             )}
+                                                        </div>
+                                                        <div className=" overflow-auto max-h-44 mx-10 mt-2">
+                                                        <img src={modalData.images[1].src} alt={modalData.title} />    
                                                         </div>
                                                     </div>
                                                     {/*footer*/}
