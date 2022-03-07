@@ -37,16 +37,16 @@ const Knowledges = () => {
                     <div>
                         <div className="border bg-div-white rounded-lg mt-4 mx-5 md:ml-36 p-4 xl:w-full">
                             <h2 className='text-center mb-2 pb-2 text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
-                            <div className="flex flex-wrap justify-around md:justify-between">
-                                <div className="w-16 md:w-18 text-center">
+                            <div className="flex justify-around xl:justify-between">
+                                <div className="w-16 xl:w-18 text-center mx-3 xl:mx-0">
                                     <img src={windows} alt="Logo de Windows" />
                                     <span className='font-roboto text-div-red'>Windows</span>
                                 </div>
-                                <div className="w-16 md:w-18 text-center">
+                                <div className="w-16 xl:w-18 text-center">
                                     <img src={mac} alt="Logo de Mac OS" />
                                     <span className='font-roboto text-div-red'>Mac OS</span>
                                 </div>
-                                <div className="w-16 md:w-18 text-center">
+                                <div className="w-16 xl:w-18 text-center mx-3 xl:mx-0">
                                     <img src={debian} alt="Logo de Debian" />
                                     <span className='font-roboto text-div-red'>Debian</span>
                                 </div>
@@ -54,7 +54,7 @@ const Knowledges = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="border bg-div-white rounded-lg mt-4 p-4 xl:ml-44 mx-5 xl:mx-36">
+                        <div className="border bg-div-white rounded-lg mt-4 p-4  sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
                             <h2 className='text-center mb-2 text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                             <div className="m-1">
                                 <p className='font-roboto'>
@@ -65,14 +65,14 @@ const Knowledges = () => {
                     </div>
                 </div>
                 {/* Projets */}
-                <div className="border bg-div-white rounded-lg mx-5 xl:mx-36 mt-4 p-4">
+                <div className="border bg-div-white rounded-lg mx-5 md:mx-36 xl:mx-36 mt-4 p-4">
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
                     <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
                             <div className='text-center' key={item.id}>
                                 <h3 className='text-div-green underline py-1'>{item.title}</h3>
 
-                                <img src={item.images[0].src} alt={item.title} className="w-40 mx-auto" id={item.title} onClick={() => {
+                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 xl:w-40 mx-auto" id={item.title} onClick={() => {
                                     setShowModal(true);
                                     setModalData(item);
                                 }} />
