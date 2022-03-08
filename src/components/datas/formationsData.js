@@ -1,4 +1,4 @@
-const Formations = [
+const FormationsInfo = [
     {
         id: 1,
         title: "Incubateur Numérique",
@@ -113,7 +113,7 @@ const Formations = [
     },
     {
         id: 8,
-        title: "Bac Sciences de Technologies et Laboratoire-",
+        title: "Bac Sciences de Technologies et Laboratoire",
         dates: "09/2001 au 07/2002",
         location: "Lycée Henri Darras - Liévin",
         // actions: [
@@ -125,4 +125,4 @@ const Formations = [
     },
 ]
 
-export default Formations;
+export default FormationsInfo;

@@ -65,7 +65,7 @@ const Knowledges = () => {
                     </div>
                 </div>
                 {/* Projets */}
-                <div className="border bg-div-white rounded-lg mx-5 md:mx-36 xl:mx-36 mt-4 p-4">
+                <div className="border bg-div-white rounded-lg mx-5 md:mx-36 mt-4 p-4">
                     <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
                     <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
@@ -101,9 +101,7 @@ const Knowledges = () => {
                                                         </p>
                                                         <div className="flex justify-center">
                                                             {modalData.technos.map(elt =>
-                                                                // <div className="border-1 bg-violet-500 mx-2 p-2 rounded text-white" key={elt.id}>
-                                                                //     {elt.title}
-                                                                // </div>
+                                                                
                                                                 <div key={elt.id}
                                                                 className="mx-2 px-2"
                                                                 >
