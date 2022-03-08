@@ -9,11 +9,11 @@ const Formations = () => {
                 {FormationsInfo.map(item =>
                     <div key={item.id} className="xl:flex xl:justify-between p-2">
                         <div>
-                            <h3>{item.title}</h3>
-                            <p>{item.dates}</p>
+                            <h3 className='text-div-red font-roboto'>{item.title}</h3>
+                            <p className='text-div-blue'>{item.dates}</p>
                         </div>
                         <div>
-                            <p>{item.location}</p>
+                            <p className='text-div-green xl:text-xl'>{item.location}</p>
                         </div>
                     </div>
 
