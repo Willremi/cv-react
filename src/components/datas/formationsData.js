@@ -122,7 +122,7 @@ const FormationsInfo = [
         //         description: "Conception de produits faisant intervenir la lumière"
         //     }
         // ]
-    },
+    }
 ]
 
 export default FormationsInfo;

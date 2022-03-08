@@ -72,7 +72,7 @@ const Knowledges = () => {
                             <div className='text-center' key={item.id}>
                                 <h3 className='text-div-green underline py-1'>{item.title}</h3>
 
-                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 xl:w-40 mx-auto" id={item.title} onClick={() => {
+                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 xl:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
                                     setShowModal(true);
                                     setModalData(item);
                                 }} />
