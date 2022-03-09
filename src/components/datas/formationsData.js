@@ -59,7 +59,7 @@ const FormationsInfo = [
         actions: [
             {
                 id: 1,
-                description: "'initiation aux outils bureautiques (traitement de texte, tableur, ...)"
+                description: "Initiation aux outils bureautiques (traitement de texte, tableur, ...)"
             }
         ]
     },

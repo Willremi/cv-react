@@ -36,13 +36,17 @@ const Formations = () => {
                                         className={`${open && 'transform rotate-180'} w-8 h-8 text-div-red`}
                                     />
                                 </Disclosure.Button>
-                                <Disclosure.Panel className="px-4 pt-4 pb-2 ">
+                                <Disclosure.Panel className="px-4 pt-4 pb-2">
                                     <div className="flex flex-col xl:flex-row xl:justify-between">
                                         <h3 className='text-div-blue font-semibold text-center'>{item.location}</h3>
                                         <p className='text-div-blue font-semibold text-sm text-center'>{item.dates}</p>
                                     
                                     </div>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet in, nobis nemo illum atque doloribus! Reiciendis dolores dolorem quibusdam rerum, nesciunt ipsum sunt quod. Omnis dolorem maxime distinctio provident accusamus suscipit incidunt alias dicta accusantium doloremque cumque esse ipsa voluptatum repellendus dolore sed nostrum ipsum blanditiis, necessitatibus nesciunt officiis. Minus.</p>
+                                    {item.actions && item.actions.map(elt => 
+                                    <ul key={elt.id}>
+                                        <li>{elt.description}</li>   
+                                    </ul>    
+                                    )}
                                 </Disclosure.Panel>
                             </>
                         )}
