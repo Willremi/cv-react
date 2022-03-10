@@ -62,7 +62,7 @@ const Formations = () => {
                                                 {item.actions.map(elt =>
                                                     <div key={elt.id} className="mx-6 xl:mx-10 ">
                                                         <ul className='list-[circle]'>
-                                                            <li className='xl:text-lg text-div-green'>{elt.description}</li>
+                                                            <li className='xl:text-lg text-div-green my-2'>{elt.description}</li>
                                                         </ul>
                                                     </div>
                                                     
