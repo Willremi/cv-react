@@ -32,14 +32,18 @@ const Formations = () => {
                     <Disclosure as="div" className="mt-2" key={item.id}>
                         {({ open }) => (
                             <>
-                                <Disclosure.Button className="flex justify-between w-full px-4 py-2 bg-green-100 rounded-lg hover:bg-div-green focus:outline-none focus-visible:ring focus-visible:ring-div-blue focus-visible:ring-opacity-75">
-                                    <div><h2 className='font-medium text-left text-div-red font-roboto'>{item.title}</h2></div>
+                                <Disclosure.Button className="flex justify-between w-full px-4 py-2 bg-green-100 rounded-lg hover:bg-div-green focus:outline-none focus-visible:ring focus-visible:ring-div-blue focus-visible:ring-opacity-75 items-center">
                                     <div>
+                                        <h3 className='font-medium text-left text-div-red font-roboto'>{item.title}</h3>
+                                    </div>
+                                    <div className="flex items-center">
+                                    <div>                                        
                                         {item.id === lastProjet ? <ChevronUpIcon
                                             className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-div-red`}
                                         /> : <ChevronDownIcon
                                             className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-div-red`}
                                         />}
+                                    </div>    
                                     </div>
                                 </Disclosure.Button>
                                 <Transition
@@ -52,17 +56,17 @@ const Formations = () => {
                                     leaveTo="transform scale-95 opacity-0"
                                 >
                                     <Disclosure.Panel className="px-4 pt-4 pb-2">
-                                        <div className="flex flex-col xl:flex-row xl:justify-between bg-nav-yellow border-nav-greenOp border-2 p-2 rounded">
-                                            <h3 className='text-div-blue font-semibold text-center'>{item.location}</h3>
+                                        <div className="flex flex-col xl:flex-row xl:justify-between bg-div-white border-nav-greenOp border-2 p-2 rounded-lg">
+                                            <h3 className='text-div-blue font-semibold text-center text-lg'>{item.location}</h3>
                                             <p className='text-div-red font-semibold text-base text-center'>{item.dates}</p>
 
                                         </div>
                                         {item.actions && 
-                                            <div className="bg-nav-yellow mx-1 py-4">
+                                            <div className="bg-nav-yellow mx-2 py-4 rounded-b-lg">
                                                 {item.actions.map(elt =>
-                                                    <div key={elt.id} className="mx-6 xl:mx-10 ">
+                                                    <div key={elt.id} className="mx-6 xl:mx-10">
                                                         <ul className='list-[circle]'>
-                                                            <li className='xl:text-lg text-div-green my-2'>{elt.description}</li>
+                                                            <li className='xl:text-lg text-div-green my-2 font-semibold'>{elt.description}</li>
                                                         </ul>
                                                     </div>
                                                     
