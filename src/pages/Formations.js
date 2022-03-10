@@ -1,9 +1,11 @@
 import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronUpIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 import React from 'react';
 import FormationsInfo from '../components/datas/formationsData';
 
 const Formations = () => {
+    const lastProjet = FormationsInfo.length;
+
     // Tri d'apparition des projets;
     FormationsInfo.sort(function (a, b) {
         return b.id - a.id;
@@ -30,24 +32,46 @@ const Formations = () => {
                     <Disclosure as="div" className="mt-2" key={item.id}>
                         {({ open }) => (
                             <>
-                                <Disclosure.Button className="flex justify-between w-full px-4 py-2 bg-green-100 rounded-lg hover:bg-div-green focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                                    <h2 className='font-medium text-left text-div-red '>{item.title}</h2>
-                                    <ChevronUpIcon
-                                        className={`${open && 'transform rotate-180'} w-8 h-8 text-div-red`}
-                                    />
-                                </Disclosure.Button>
-                                <Disclosure.Panel className="px-4 pt-4 pb-2">
-                                    <div className="flex flex-col xl:flex-row xl:justify-between">
-                                        <h3 className='text-div-blue font-semibold text-center'>{item.location}</h3>
-                                        <p className='text-div-blue font-semibold text-sm text-center'>{item.dates}</p>
-                                    
+                                <Disclosure.Button className="flex justify-between w-full px-4 py-2 bg-green-100 rounded-lg hover:bg-div-green focus:outline-none focus-visible:ring focus-visible:ring-div-blue focus-visible:ring-opacity-75">
+                                    <div><h2 className='font-medium text-left text-div-red font-roboto'>{item.title}</h2></div>
+                                    <div>
+                                        {item.id === lastProjet ? <ChevronUpIcon
+                                            className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-div-red`}
+                                        /> : <ChevronDownIcon
+                                            className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-div-red`}
+                                        />}
                                     </div>
-                                    {item.actions && item.actions.map(elt => 
-                                    <ul key={elt.id}>
-                                        <li>{elt.description}</li>   
-                                    </ul>    
-                                    )}
-                                </Disclosure.Panel>
+                                </Disclosure.Button>
+                                <Transition
+                                    show={item.id === lastProjet ? !open : open}
+                                    enter="transition duration-100 ease-out"
+                                    enterFrom="transform scale-95 opacity-0"
+                                    enterTo="transform scale-100 opacity-100"
+                                    leave="transition duration-75 ease-out"
+                                    leaveFrom="transform scale-100 opacity-100"
+                                    leaveTo="transform scale-95 opacity-0"
+                                >
+                                    <Disclosure.Panel className="px-4 pt-4 pb-2">
+                                        <div className="flex flex-col xl:flex-row xl:justify-between bg-nav-yellow border-nav-greenOp border-2 p-2 rounded">
+                                            <h3 className='text-div-blue font-semibold text-center'>{item.location}</h3>
+                                            <p className='text-div-red font-semibold text-base text-center'>{item.dates}</p>
+
+                                        </div>
+                                        {item.actions && 
+                                            <div className="bg-nav-yellow mx-1 py-4">
+                                                {item.actions.map(elt =>
+                                                    <div key={elt.id} className="mx-6 xl:mx-10 ">
+                                                        <ul className='list-[circle]'>
+                                                            <li className='xl:text-lg text-div-green'>{elt.description}</li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                )}
+                                            </div>
+                                        }
+                                    </Disclosure.Panel>
+
+                                </Transition>
                             </>
                         )}
                     </Disclosure>
