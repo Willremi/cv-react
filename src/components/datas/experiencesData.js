@@ -4,11 +4,10 @@ const ExperiencesInfo = [
         title: "Contrôleur Non destructif",
         dates: "Avril 2008",
         location: "Euro Techni Contrôle - Lens",
-        text: "Contrôle des pièces soudées et forgées",
         missions: [
             {
                 id:1,
-                title: "Par radiographie X"
+                title: "Contrôle des pièces soudées et forgées par radiographie X"
             },
             
         ],
@@ -19,19 +18,14 @@ const ExperiencesInfo = [
         title: "Contrôleur Non destructif",
         dates: "Juin à Août 2008",
         location: "MECASEM - Ostwald",
-        text: "Contrôle des pièces soudées et forgées",
         missions: [
             {
                 id:1,
-                title: "Par ressuage"
+                title: "Contrôle surfaciques des pièces soudées et forgées en ressuage et en magnétoscopie"
             },
             {
                 id:2,
-                title: "Par magnétoscopie"
-            },
-            {
-                id:3,
-                title: "Par radiographie X"
+                title: "Contrôle volumiques des pièces soudées et forgées en radiographie X"
             },
             
         ],
@@ -42,19 +36,14 @@ const ExperiencesInfo = [
         title: "Contrôleur Non destructif",
         dates: "Novembre 2008",
         location: "COFICE - Grande Synthe",
-        text: "Contrôle des pièces soudées et forgées",
         missions: [
             {
                 id:1,
-                title: "Par ressuage"
+                title: "Contrôle surfaciques des pièces soudées et forgées en ressuage et en magnétoscopie"
             },
             {
                 id:2,
-                title: "Par magnétoscopie"
-            },
-            {
-                id:3,
-                title: "Par ultrasons"
+                title: "Contrôle volumiques des pièces soudées et forgées en ultrasons"
             },
             
         ],
@@ -65,15 +54,14 @@ const ExperiencesInfo = [
         title: "Contrôleur Non destructif",
         dates: "Février 2009",
         location: "Chaudronnerie Industrielle de Furiani - Biguglia",
-        text: "Contrôle des pièces soudées",
         missions: [
             {
                 id:1,
-                title: "Par ressuage"
+                title: "Contrôle surfaciques des pièces soudées et forgées en ressuage"
             },
             {
                 id:2,
-                title: "Par radiographie X"
+                title: "Contrôle volumique des pièces soudées et forgées en radiographie X"
             },
             
         ],
@@ -165,7 +153,7 @@ const ExperiencesInfo = [
         tag: "logistic"
     },
     {
-        id: 1,
+        id: 10,
         title: "Développeur Web",
         dates: "Juillet à Septembre 2020",
         location: "Réseau Théâtre de l'Opprimé - Lille",
