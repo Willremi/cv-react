@@ -64,9 +64,9 @@ const Formations = () => {
                                         {item.actions && 
                                             <div className="bg-nav-yellow mx-2 py-4 rounded-b-lg">
                                                 {item.actions.map(elt =>
-                                                    <div key={elt.id} className="mx-6 xl:mx-10">
+                                                    <div key={elt.id} className="mx-6 sm:mx-10">
                                                         <ul className='list-[circle]'>
-                                                            <li className='xl:text-lg text-div-green my-2 font-semibold'>{elt.description}</li>
+                                                            <li className='sm:text-xl xl:text-lg text-div-green my-2 font-semibold'>{elt.description}</li>
                                                         </ul>
                                                     </div>
                                                     
