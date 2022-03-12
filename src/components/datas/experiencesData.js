@@ -136,7 +136,7 @@ const ExperiencesInfo = [
     },
     {
         id: 9,
-        title: "Agent d'Exploitation logistique",
+        title: "Agent d'exploitation logistique",
         dates: "Fin Juin 2018",
         location: "Amazon - Lauwin Planque",
         missions: [
