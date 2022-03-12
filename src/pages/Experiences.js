@@ -27,17 +27,20 @@ const Experiences = () => {
         <div className='flex items-center justify-center mt-20 mb-20'>
             <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-5 w-full'>
                 <h1 className='text-center text-div-blue font-roboto font-semibold'>Expériences professionnelles</h1>
+                <div className="border-t-2 my-4 border-div-green"></div>
+                <div className="mt-3">
+                    <div className="text-center xl:text-right">
+                        <select value={selected} onChange={selectionExp
+                        } className="text-center p-2 xl:px-1 rounded bg-nav-greenOp text-white xl:w-96">
+                            {options.map(opt =>
+                                <option value={opt.tag} key={opt.id} className="">{opt.name}</option>
+                            )}
+                        </select>
+                    </div>
 
-                <div className="mt-2">
-                    <select value={selected} onChange={selectionExp
-                    }>
-                        {options.map(opt =>
-                            <option value={opt.tag} key={opt.id}>{opt.name}</option>
-                        )}
-                    </select>
-
+                    <div className="mt-2">
                     {ExperiencesInfo.map(item =>
-                        <div key={item.id} className={`${selected === item.tag || selected ==='' ? 'flex' :'hidden'}`}>
+                        <div key={item.id} className={`${selected === item.tag || selected === '' ? 'flex' : 'hidden'}`}>
                             <div className="p-2">
                                 <div>
                                     <h3 className='text-div-red font-roboto'>{item.title}</h3>
@@ -47,10 +50,10 @@ const Experiences = () => {
                                     <p className='text-div-green xl:text-lg'>{item.location}</p>
                                 </div>
                             </div>
-                            {/* <div className={`${item.id !== 1 && 'border-t-2 mx-2 my-2 border-white'}`}></div> */}
                         </div>
-                        
+
                     )}
+                    </div>
                 </div>
             </div>
         </div>
