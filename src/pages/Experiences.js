@@ -8,6 +8,8 @@ const Experiences = () => {
     });
 
     const [selected, setSelected] = useState('')
+    const [showModal, setShowModal] = useState(false);
+    const [modalData, setModalData] = useState(null);
 
     const options = [
         { id: "0", name: "Sélectionnez la profession", tag: "" },
@@ -39,20 +41,67 @@ const Experiences = () => {
                     </div>
 
                     <div className="mt-2">
-                    {ExperiencesInfo.map(item =>
-                        <div key={item.id} className={`${selected === item.tag || selected === '' ? 'flex' : 'hidden'}`}>
-                            <div className="p-2">
-                                <div>
-                                    <h3 className='text-div-red font-roboto'>{item.title}</h3>
-                                    <p className='text-div-blue'>{item.dates}</p>
+                        {ExperiencesInfo.map(item =>
+                            <div key={item.id} className={`${selected === item.tag || selected === '' ? '' : 'hidden'}`}>
+                                <div className="p-2" onClick={() => {
+                                    setShowModal(true);
+                                    setModalData(item);
+                                }}>
+                                    <div>
+                                        <h3 className='text-div-red font-roboto'>{item.title}</h3>
+                                        <p className='text-div-blue'>{item.dates}</p>
+                                    </div>
+                                    <div>
+                                        <p className='text-div-green xl:text-lg'>{item.location}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className='text-div-green xl:text-lg'>{item.location}</p>
-                                </div>
-                            </div>
-                        </div>
+                                {/* Modal */}
+                                {showModal ? (
+                                    <>
+                                        <div
+                                            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                                        // onClick={() => setShowModal(false)}
+                                        >
+                                            <div className="relative w-auto my-6 mx-2 max-w-3xl">
+                                                {/*content*/}
+                                                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                                    {/*header*/}
+                                                    <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                                        <h2 className="font-semibold text-blue-500 font-roboto">
+                                                            {modalData.title}
+                                                        </h2>
+                                                    </div>
+                                                    {/*body*/}
+                                                    <div className="relative px-6 p-4 flex-auto">
+                                                        {modalData.missions.map(elt =>
+                                                            <div key={elt.id}>
+                                                                <p className="my-2 text-gray-800 text-lg leading-relaxed">
+                                                                    {elt.title}
+                                                                </p>
+                                                            </div>
 
-                    )}
+                                                        )}
+
+                                                    </div>
+                                                    {/*footer*/}
+                                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                                        <button
+                                                            className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                                            type="button"
+                                                            onClick={() => setShowModal(false)}
+                                                        >
+                                                            Fermer la fenêtre
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="opacity-25 fixed inset-0 z-40 bg-white"></div>
+                                    </>
+                                ) : null}
+                            </div>
+
+                        )}
                     </div>
                 </div>
             </div>
