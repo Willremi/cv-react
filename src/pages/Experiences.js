@@ -41,7 +41,7 @@ const Experiences = () => {
                     <div className="mt-2 xl:flex xl:flex-wrap xl:justify-center">
                         {ExperiencesInfo.map(item =>
                             <div key={item.id} className={`${selected === item.tag || selected === '' ? '' : 'hidden'}`}>
-                                <div className="border-2 border-div-green rounded-lg w-96 flex items-center p-2 m-2"
+                                <div className="border-2 border-div-green rounded-lg w-96 flex items-center p-2 m-2 bg-nav-yellow"
                                 >
                                     <div className='text-center mx-auto'>
                                         <h3 className='text-div-red font-roboto'>{item.title}</h3>
@@ -50,9 +50,9 @@ const Experiences = () => {
                                         <details>
                                             <summary className='font-roboto text-gray-700'>Activités</summary>
                                             {item.missions.map(elt =>
-                                                <div className="text-left mx-8 xl:mx-3" key={elt.id}>
+                                                <div className="text-left mx-8 xl:mx-6" key={elt.id}>
                                                     <ul className='list-[circle]'>
-                                                    <li className='font-roboto text-sm text-blue-800'>{elt.title}</li>
+                                                    <li className='font-roboto text-md text-blue-800'>{elt.title}</li>
                                                 </ul>
                                                 </div>
                                             )}
