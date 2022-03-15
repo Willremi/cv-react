@@ -38,21 +38,21 @@ const Experiences = () => {
                         </select>
                     </div>
 
-                    <div className="mt-2 xl:flex xl:flex-wrap xl:justify-center">
+                    <div className="mt-2 xl:flex xl:flex-wrap xl:justify-center sm:flex sm:flex-wrap sm:justify-center">
                         {ExperiencesInfo.map(item =>
                             <div key={item.id} className={`${selected === item.tag || selected === '' ? '' : 'hidden'}`}>
-                                <div className="border-2 border-div-green rounded-lg w-96 flex items-center p-2 m-2 bg-nav-yellow"
+                                <div className="border-2 border-div-green rounded-lg w-96 sm:w-72 md:w-96 xl:w-96 flex items-center p-2 m-2 bg-nav-yellow"
                                 >
                                     <div className='text-center mx-auto'>
-                                        <h3 className='text-div-red font-roboto'>{item.title}</h3>
+                                        <h3 className='text-div-red font-roboto xl:text-xl sm:text-base'>{item.title}</h3>
                                         <p className='text-div-blue'>{item.dates}</p>
-                                        <p className='text-div-green text-lg xl:text-md'>{item.location}</p>
+                                        <p className='text-div-green text-lg sm:text-base md:text-sm'>{item.location}</p>
                                         <details>
-                                            <summary className='font-roboto text-gray-700'>Activités</summary>
+                                            <summary className='font-roboto text-blue-700 text-lg'>Activités</summary>
                                             {item.missions.map(elt =>
                                                 <div className="text-left mx-8 xl:mx-6" key={elt.id}>
                                                     <ul className='list-[circle]'>
-                                                    <li className='font-roboto text-md text-blue-800'>{elt.title}</li>
+                                                    <li className='font-roboto text-md text-gray-700'>{elt.title}</li>
                                                 </ul>
                                                 </div>
                                             )}
