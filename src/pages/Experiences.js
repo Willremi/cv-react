@@ -46,7 +46,7 @@ const Experiences = () => {
                                     <div className='text-center mx-auto'>
                                         <h3 className='text-div-red font-roboto xl:text-xl sm:text-base'>{item.title}</h3>
                                         <p className='text-div-blue'>{item.dates}</p>
-                                        <p className='text-div-green text-lg sm:text-base md:text-sm'>{item.location}</p>
+                                        <p className='text-div-green text-lg sm:text-base md:text-sm xl:text-lg'>{item.location}</p>
                                         <details>
                                             <summary className='font-roboto text-blue-700 text-lg'>Activités</summary>
                                             {item.missions.map(elt =>
