@@ -50,7 +50,15 @@ body {
     a {
         @apply no-underline;
     }
-    
+    label {
+        @apply font-roboto text-center md:text-lg
+    }
+    input {
+        @apply bg-green-200 border-2 border-div-blue rounded-md active:bg-div-green
+    }
+    textarea {
+        @apply bg-green-200 border-2 border-div-blue rounded-md active:bg-div-green
+    }
 }
 
 @layer components {
