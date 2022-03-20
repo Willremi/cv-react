@@ -51,13 +51,13 @@ body {
         @apply no-underline;
     }
     label {
-        @apply font-roboto text-center md:text-lg
+        @apply font-roboto text-center text-base md:text-lg text-div-blue font-semibold
     }
     input {
-        @apply bg-green-200 border-2 border-div-blue rounded-md active:bg-div-green
+        @apply bg-green-200 border-2 border-div-blue rounded-md text-sm md:text-lg
     }
     textarea {
-        @apply bg-green-200 border-2 border-div-blue rounded-md active:bg-div-green
+        @apply bg-green-200 border-2 border-div-blue rounded-md md:text-lg
     }
 }
 

@@ -8,7 +8,7 @@ const Contact = () => {
                 <div className="border-t-2 my-4 border-div-green"></div>
 
                 <form name="contact" method="post" data-netlify="true" onSubmit="submit"
-                    className=' flex flex-col w-1/2 mx-auto'
+                    className='flex flex-col xl:w-1/2 xl:mx-auto'
                 >
                     <input type="hidden" name="form-name" value="contact" />
 
@@ -23,7 +23,7 @@ const Contact = () => {
                     <textarea name="message"></textarea>
 
 
-                    <button type="submit">Send</button>
+                    <button type="submit" className='mt-3 border-2 border-div-green bg-div-green w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white'>Envoyer</button>
 
                 </form>
 
