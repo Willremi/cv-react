@@ -1,5 +1,12 @@
 import { Field, Formik } from 'formik';
 import React from 'react';
+import validationSchema from '../components/constants/validationSchema';
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
 
 const Contact = () => {
     return (
@@ -29,8 +36,28 @@ const Contact = () => {
                 </form> */}
                 <Formik
                     initialValues={{ name: '', email: '', message: '' }}
-                    onSubmit={values => console.log(values)}
+                    validationSchema={validationSchema}
+                    onSubmit={(values, { setSubmitting }) => {
+                        fetch("/?no-cache=1", {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: encode({
+                                'form-name': 'contact',
+                                ...values,
+                            })
+                        })
+                            .then(() => {
+                                alert('Votre message a bien été envoyé!')
+                                setSubmitting(false)
+                            })
+                            .catch(err => {
+                                alert('Erreur : Essayez encore s\'il vous plaît!')
+                                setSubmitting(false)
+                            })
+                    }}
                     render={({
+                        touched,
+                        errors,
                         isSubmitting,
                         handleSubmit,
                         handleReset,
@@ -48,21 +75,24 @@ const Contact = () => {
                                 type="text"
                                 name="name"
                             />
+                            {touched.name && errors.name && <p className='danger'>{errors.name}</p>}
 
                             <label htmlFor="email" className='mt-2'>Votre email</label>
                             <Field
                                 type="email"
                                 name="email"
                             />
+                            {touched.email && errors.email && <p className='danger'>{errors.email}</p>}
 
                             <label htmlFor="message" className='mt-2'>Votre message</label>
                             <Field
                                 as="textarea"
                                 name="message"
                             />
+                            {touched.message && errors.message && <p className='danger'>{errors.message}</p>}
 
                             <div className="flex">
-                                <button type="reset" className='mt-3 border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold' disabled={isSubmitting}>Annuler</button>
+                                <button type="reset" className='mt-3 border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold'>Annuler</button>
                                 <button type="submit" className='mt-3 border-2 border-div-green bg-div-green w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-green font-semibold' disabled={isSubmitting}>Envoyer</button>
                             </div>
                         </form>
