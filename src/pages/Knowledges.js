@@ -20,7 +20,8 @@ const Knowledges = () => {
             {/* page Compétences */}
             <div>
                 <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-3'>
-                    <h1 className='text-center mb-4 text-div-blue font-roboto font-semibold'>Technologies en développement</h1>
+                    <h1 className='text-center text-div-blue font-roboto font-semibold'>Technologies en développement</h1>
+                    <div className="border-t-2 my-4 border-div-green"></div>
                     <div className='flex flex-wrap justify-center'>
                         {SkillsInfo.map(item =>
                             <div className='w-16 md:w-24 text-center' key={item.id}>
@@ -36,7 +37,8 @@ const Knowledges = () => {
                 <div className="md:flex">
                     <div>
                         <div className="border bg-div-white rounded-lg mt-4 mx-5 md:ml-36 p-4 xl:w-full">
-                            <h2 className='text-center mb-2 pb-2 text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
+                            <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="flex justify-around xl:justify-between">
                                 <div className="w-16 xl:w-18 text-center mx-3 xl:mx-0">
                                     <img src={windows} alt="Logo de Windows" />
@@ -55,7 +57,8 @@ const Knowledges = () => {
                     </div>
                     <div>
                         <div className="border bg-div-white rounded-lg mt-4 p-4  sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
-                            <h2 className='text-center mb-2 text-div-blue font-roboto font-semibold'>À propos de moi</h2>
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
+                            <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="m-1">
                                 <p className='font-roboto'>
                                     Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
@@ -66,11 +69,12 @@ const Knowledges = () => {
                 </div>
                 {/* Projets */}
                 <div className="border bg-div-white rounded-lg mx-5 md:mx-36 mt-4 p-4">
-                    <h2 className="text-center mb-2 text-div-blue font-roboto font-semibold">Projets</h2>
+                    <h2 className="text-center text-div-blue font-roboto font-semibold">Projets</h2>
+                    <div className="border-t-2 my-4 border-div-green"></div>
                     <div className="flex flex-wrap justify-around">
                         {Projets.map(item =>
                             <div className='text-center' key={item.id}>
-                                <h3 className='text-div-green underline py-1'>{item.title}</h3>
+                                <h3 className='text-div-blue underline py-1 font-semibold'>{item.title}</h3>
 
                                 <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 xl:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
                                     setShowModal(true);
