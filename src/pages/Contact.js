@@ -35,33 +35,35 @@ const Contact = () => {
 
                 </form> */}
                 <Formik
-                    initialValues={{ name: '', email: '', message: '' }}
-                    validationSchema={validationSchema}
-                    onSubmit={(values, { setSubmitting }) => {
-                        fetch("/?no-cache=1", {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                            body: encode({
-                                'form-name': 'contact',
-                                ...values,
-                            })
+                initialValues={{ name: '', email: '', message: '' }}
+                validationSchema={validationSchema}
+                onSubmit={(values, { setSubmitting, resetForm }) => {
+                    fetch("/?no-cache=1", {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: encode({
+                            'form-name': 'contact',
+                            ...values,
                         })
-                            .then(() => {
-                                alert('Votre message a bien été envoyé!')
-                                setSubmitting(false)
-                            })
-                            .catch(err => {
-                                alert('Erreur : Essayez encore s\'il vous plaît!')
-                                setSubmitting(false)
-                            })
-                    }}
-                    render={({
+                    })
+                        .then(() => {
+                            alert('Votre message a bien été envoyé!')
+                            setSubmitting(false)
+                            resetForm();
+                        })
+                        .catch(err => {
+                            alert('Erreur : Essayez encore s\'il vous plaît!')
+                            setSubmitting(false)
+                        })
+                }}
+                >
+                    {({
                         touched,
                         errors,
                         isSubmitting,
                         handleSubmit,
                         handleReset,
-                    }) => (
+                    })=> (
                         <form name='contact'
                             onSubmit={handleSubmit}
                             onReset={handleReset}
@@ -74,31 +76,30 @@ const Contact = () => {
                                 //   as="input"
                                 type="text"
                                 name="name"
+                                
                             />
-                            {touched.name && errors.name && <p className='danger'>{errors.name}</p>}
-
+                            {touched.name && errors.name && <span className='text-div-red'>{errors.name}</span>}
                             <label htmlFor="email" className='mt-2'>Votre email</label>
                             <Field
                                 type="email"
                                 name="email"
                             />
-                            {touched.email && errors.email && <p className='danger'>{errors.email}</p>}
+                            {touched.email && errors.email && <span className='text-div-red'>{errors.email}</span>}
 
                             <label htmlFor="message" className='mt-2'>Votre message</label>
                             <Field
                                 as="textarea"
                                 name="message"
                             />
-                            {touched.message && errors.message && <p className='danger'>{errors.message}</p>}
+                            {touched.message && errors.message && <span className='text-div-red'>{errors.message}</span>}
 
                             <div className="flex">
                                 <button type="reset" className='mt-3 border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold'>Annuler</button>
                                 <button type="submit" className='mt-3 border-2 border-div-green bg-div-green w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-green font-semibold' disabled={isSubmitting}>Envoyer</button>
                             </div>
                         </form>
-                    )
-                    }
-                />
+                    )}
+                </Formik>
 
             </div>
         </div>
