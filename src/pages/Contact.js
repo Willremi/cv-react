@@ -93,15 +93,17 @@ const Contact = () => {
                             />
                             {touched.message && errors.message && <span className='text-div-red'>{errors.message}</span>}
 
-                            <div className="flex">
-                                <button type="reset" className='mt-3 border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold'>Annuler</button>
-                                <button type="submit" className='mt-3 border-2 border-div-green bg-div-green w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-green font-semibold' disabled={isSubmitting}>Envoyer</button>
+                            <div className="flex mt-6">
+                                <button type="reset" className='border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold'>Annuler</button>
+
+                                <button type="submit" className='border-2 border-div-green bg-div-green w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-green font-semibold' disabled={isSubmitting}>Envoyer</button>
                             </div>
                         </form>
                     )}
                 </Formik>
-
             </div>
+
+            {/* à faire : modale de confirmation et visualiser sur tablette */}
         </div>
     );
 };
