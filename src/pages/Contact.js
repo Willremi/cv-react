@@ -121,7 +121,7 @@ const Contact = () => {
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
                                     <h2 className="font-semibold text-blue-500 font-roboto">
-                                        Rémi W. - PortFolio
+                                        {document.title}
                                     </h2>
                                 </div>
                                 {/*body*/}
