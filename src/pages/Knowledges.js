@@ -93,14 +93,14 @@ const Knowledges = () => {
                                                 {/*content*/}
                                                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                                     {/*header*/}
-                                                    <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                                                        <h2 className="font-semibold text-blue-500 font-roboto">
+                                                    <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
+                                                        <h2 className="font-semibold text-div-blue font-roboto">
                                                             {modalData.title}
                                                         </h2>
                                                     </div>
                                                     {/*body*/}
                                                     <div className="relative px-6 p-4 flex-auto">
-                                                        <p className="my-2 text-gray-800 text-lg leading-relaxed">
+                                                        <p className="my-2 text-gray-800 text-lg leading-relaxed font-roboto">
                                                             {modalData.description}
                                                         </p>
                                                         <div className="flex justify-center">
@@ -120,9 +120,9 @@ const Knowledges = () => {
                                                         </div>
                                                     </div>
                                                     {/*footer*/}
-                                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                                    <div className="flex items-center justify-end p-4 mx-4 border-t border-solid border-div-green rounded-b">
                                                         <button
-                                                            className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                                            className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                                             type="button"
                                                             onClick={() => setShowModal(false)}
                                                         >

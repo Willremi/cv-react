@@ -1,5 +1,5 @@
 import { Field, Formik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import validationSchema from '../components/constants/validationSchema';
 
 const encode = (data) => {
@@ -8,7 +8,11 @@ const encode = (data) => {
         .join('&')
 }
 
+
 const Contact = () => {
+    const [showModal, setShowModal] = useState(false);
+
+
     return (
         <div className='flex items-center justify-center h-screen'>
             <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-5 w-full'>
@@ -35,27 +39,28 @@ const Contact = () => {
 
                 </form> */}
                 <Formik
-                initialValues={{ name: '', email: '', message: '' }}
-                validationSchema={validationSchema}
-                onSubmit={(values, { setSubmitting, resetForm }) => {
-                    fetch("/?no-cache=1", {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: encode({
-                            'form-name': 'contact',
-                            ...values,
+                    initialValues={{ name: '', email: '', message: '' }}
+                    validationSchema={validationSchema}
+                    onSubmit={(values, { setSubmitting, resetForm }) => {
+                        fetch("/?no-cache=1", {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: encode({
+                                'form-name': 'contact',
+                                ...values,
+                            })
                         })
-                    })
-                        .then(() => {
-                            alert('Votre message a bien été envoyé!')
-                            setSubmitting(false)
-                            resetForm();
-                        })
-                        .catch(err => {
-                            alert('Erreur : Essayez encore s\'il vous plaît!')
-                            setSubmitting(false)
-                        })
-                }}
+                            .then(() => {
+                                // alert('Votre message a bien été envoyé!')
+                                setShowModal(true)
+                                setSubmitting(false)
+                                resetForm();
+                            })
+                            .catch(err => {
+                                alert('Erreur : Essayez encore s\'il vous plaît!')
+                                setSubmitting(false)
+                            })
+                    }}
                 >
                     {({
                         touched,
@@ -63,7 +68,7 @@ const Contact = () => {
                         isSubmitting,
                         handleSubmit,
                         handleReset,
-                    })=> (
+                    }) => (
                         <form name='contact'
                             onSubmit={handleSubmit}
                             onReset={handleReset}
@@ -76,7 +81,7 @@ const Contact = () => {
                                 //   as="input"
                                 type="text"
                                 name="name"
-                                
+
                             />
                             {touched.name && errors.name && <span className='text-div-red'>{errors.name}</span>}
                             <label htmlFor="email" className='mt-2'>Votre email</label>
@@ -104,6 +109,43 @@ const Contact = () => {
             </div>
 
             {/* à faire : modale de confirmation et visualiser sur tablette */}
+            {showModal ? (
+                <>
+                    <div
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                    // onClick={() => setShowModal(false)}
+                    >
+                        <div className="relative w-full my-6 mx-2 max-w-3xl">
+                            {/*content*/}
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                {/*header*/}
+                                <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
+                                    <h2 className="font-semibold text-blue-500 font-roboto">
+                                        Rémi W. - PortFolio
+                                    </h2>
+                                </div>
+                                {/*body*/}
+                                <div className="relative px-6 p-4 flex-auto text-center">
+                                    <p className="my-2 text-div-blue text-xl font-roboto leading-relaxed">
+                                        Votre message a bien été envoyé
+                                    </p>
+                                </div>
+                                {/*footer*/}
+                                <div className="flex items-center justify-end p-4 border-t border-solid border-div-green mx-4 rounded-b">
+                                    <button
+                                        className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mb-1 ease-linear transition-all duration-150"
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                    >
+                                        Fermer la fenêtre
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="opacity-25 fixed inset-0 z-40 bg-white"></div>
+                </>
+            ) : null}
         </div>
     );
 };
