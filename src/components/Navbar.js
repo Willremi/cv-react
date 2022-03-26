@@ -44,7 +44,7 @@ const Navbar = () => {
                                         )}
                                     </Disclosure.Button>
                                 </div>
-                                <img src={rw} alt="RW" className="hidden items-center lg:flex h-18 w-32" />
+                                <Link to="/"><img src={rw} alt="RW" className="hidden items-center lg:flex h-18 w-32" /></Link>
                                 <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-between">
                                     <div className="flex-shrink-0 flex items-center">
 
