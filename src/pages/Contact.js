@@ -1,6 +1,7 @@
 import { Field, Formik } from 'formik';
 import React, { useState } from 'react';
 import validationSchema from '../components/constants/validationSchema';
+import Logo from '../assets/images/logos/rw.png'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -115,21 +116,22 @@ const Contact = () => {
                     >
                         <div className="relative w-full my-6 mx-2 max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-nav-yellow outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
-                                    <h2 className="font-semibold text-blue-500 font-roboto">
+                                <div className="flex items-center justify-start border-b border-solid border-div-green mx-4 rounded-t">
+                                    <img src={Logo} alt="RW" className='w-20 h-20' />
+                                    <h2 className="font-semibold text-div-blue font-roboto">
                                         {document.title}
                                     </h2>
                                 </div>
                                 {/*body*/}
                                 <div className="relative px-6 p-4 flex-auto text-center">
-                                    <p className="my-2 text-div-blue text-xl font-roboto leading-relaxed">
-                                        Votre message a bien été envoyé
+                                    <p className="my-2 text-green-500 text-xl font-roboto font-semibold">
+                                        Votre message a bien été envoyé !
                                     </p>
                                 </div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-end p-4 border-t border-solid border-div-green mx-4 rounded-b">
+                                <div className="flex items-center justify-end border-t border-solid border-div-green mx-4 rounded-b h-20">
                                     <button
                                         className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mb-1 ease-linear transition-all duration-150"
                                         type="button"
