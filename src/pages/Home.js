@@ -8,8 +8,8 @@ import Github from '../assets/images/logos/github.png';
 const Home = () => {
     return <>
         <div className="flex items-center justify-center h-screen md:mt-10 xl:mt-0">
-            <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-52'>
-                <img src={Remi} alt="" className='w-36 sm:w-56 md:w-52 xl:w-36 h-36 sm:h-56 md:h-52 xl:h-36 rounded-full' />
+            <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-60'>
+                <img src={Remi} alt="profil" className='w-36 sm:w-56 md:w-52 h-36 sm:h-56 md:h-52 xl:w-40 xl:h-40 rounded-full' />
             </div>
 
             <div className="bg-div-white rounded-lg border shadow-lg p-10 sm:p-16 xl:p-12 sm:px-44 md:px-48 xl:px-48 fixed z-10">

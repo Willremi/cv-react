@@ -13,7 +13,7 @@ const Contact = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className='flex items-center justify-center h-screen'>
+        <div className='flex items-center justify-center mt-72 md:mt-28 xl:mt-0 xl:h-screen fixed w-screen'>
             <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-5 w-full'>
                 <h1 className='text-center text-div-blue font-roboto font-semibold'>Me contacter</h1>
                 <div className="border-t-2 my-4 border-div-green"></div>
@@ -73,14 +73,14 @@ const Contact = () => {
                             onReset={handleReset}
                             data-netlify='true'
                             data-netlify-honeypot='bot-field'
-                            className='flex flex-col xl:w-1/2 xl:mx-auto'
+                            className='flex flex-col xl:w-1/2 mx-20 xl:mx-auto'
                         >
                             <label htmlFor="name">Votre nom</label>
                             <Field
-                                //   as="input"
+                                as="input"
                                 type="text"
                                 name="name"
-
+                                className=""
                             />
                             {touched.name && errors.name && <span className='text-div-red'>{errors.name}</span>}
                             <label htmlFor="email" className='mt-2'>Votre email</label>
@@ -94,6 +94,7 @@ const Contact = () => {
                             <Field
                                 as="textarea"
                                 name="message"
+                                rows={2}
                             />
                             {touched.message && errors.message && <span className='text-div-red'>{errors.message}</span>}
 

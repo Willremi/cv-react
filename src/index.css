@@ -54,10 +54,10 @@ body {
         @apply font-roboto text-center text-base md:text-lg text-div-blue font-semibold
     }
     input {
-        @apply bg-green-200 border-2 border-div-blue rounded-md text-sm md:text-lg
+        @apply bg-green-200 border-2 border-div-blue rounded-md text-base sm:text-lg md:text-lg text-yellow-700
     }
     textarea {
-        @apply bg-green-200 border-2 border-div-blue rounded-md md:text-lg
+        @apply bg-green-200 border-2 border-div-blue rounded-md text-base sm:text-lg md:text-lg text-yellow-700
     }
 }
 
