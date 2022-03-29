@@ -64,7 +64,7 @@ const Home = () => {
                 </StyledTooltip> */}
                 <StyledTooltip title="Mon Linkedin" arrow={true}>
                     <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
-                        <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 bg-white rounded mx-2 ml-4 md:ml-10 md:mx-10' />
+                        <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 bg-white rounded mx-10 ml-4 md:ml-10 md:mx-10' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Linkedin" arrow={true}>
@@ -74,12 +74,12 @@ const Home = () => {
                 </StyledTooltip>
                 <StyledTooltip title="Mon Github" arrow={true}>
                     <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                        <img src={Github} alt="Github" className='w-12 sm:w-20 sm:h-20 mx-2 md:w-16 md:h-16 bg-white rounded-full md:mx-10' />
+                        <img src={Github} alt="Github" className='w-12 sm:w-24 sm:h-24 mx-10 md:w-20 md:h-20 bg-white rounded-full md:mx-10' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Email" arrow={true}>
                     <a href={`mailto:wi11remi@wiremi.fr?subject=Message provenant du site ${document.title}`} target="_blank" rel="noreferrer">
-                        <img src={Mail} alt="E-mail" className='w-16 md:w-20 md:h-20  md:mx-10' />
+                        <img src={Mail} alt="E-mail" className='w-28 md:w-20 md:h-20  md:mx-10' />
                     </a>
                 </StyledTooltip>
             </div>
