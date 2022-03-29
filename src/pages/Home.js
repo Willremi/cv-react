@@ -4,21 +4,9 @@ import Remi from '../assets/images/remi.jpg';
 import Twitter from '../assets/images/logos/twitter.png';
 import Linkedin from '../assets/images/logos/linkedin.png';
 import Github from '../assets/images/logos/github.png';
-import { styled, Tooltip } from '@mui/material';
+import Mail from '../assets/images/logos/mail.png'
+import StyledTooltip from '../components/constants/StyledTooltip';
 
-const StyledTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} classes={{ popper: className }} />
-))`
-    & .MuiTooltip-tooltip {
-        background: #33658A;
-        font-size: 16px;
-        color: white;
-        font-weight: bold;
-    }
-    .MuiTooltip-arrow {
-        color: #33658A;
-    }
-    `;
 const Home = () => {
 
     return <>
@@ -58,10 +46,10 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="z-20 mt-36 sm:mt-48 xl:mt-40 flex fixed">
-                <StyledTooltip title="Mon Linkedin" arrow={true}>
+            <div className="z-20 mt-36 sm:mt-48 xl:mt-40 flex fixed items-center">
+                {/* <StyledTooltip title="Mon Linkedin" arrow={true}>
                     <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
-                        <img src={Linkedin} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 mx-10 sm:mx-20 md:mx-28 bg-white rounded' />
+                        <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 mx-10 sm:mx-20 md:mx-28 bg-white rounded' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Twitter" arrow={true}>
@@ -72,6 +60,26 @@ const Home = () => {
                 <StyledTooltip title="Mon Github" arrow={true}>
                     <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
                         <img src={Github} alt="Twitter" className='w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 mx-10 sm:mx-20 md:mx-28 bg-white rounded-full' />
+                    </a>
+                </StyledTooltip> */}
+                <StyledTooltip title="Mon Linkedin" arrow={true}>
+                    <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
+                        <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 bg-white rounded mx-2 ml-4 md:ml-10 md:mx-10' />
+                    </a>
+                </StyledTooltip>
+                <StyledTooltip title="Mon Linkedin" arrow={true}>
+                    <a href="https://twitter.com/RmiWill" target="_blank" rel="noreferrer">
+                        <img src={Twitter} alt="Twitter" className='w-12 sm:w-20 sm:h-20 md:w-16 md:h-16 bg-white rounded mx-2 md:mx-10' />
+                    </a>
+                </StyledTooltip>
+                <StyledTooltip title="Mon Github" arrow={true}>
+                    <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
+                        <img src={Github} alt="Github" className='w-12 sm:w-20 sm:h-20 mx-2 md:w-16 md:h-16 bg-white rounded-full md:mx-10' />
+                    </a>
+                </StyledTooltip>
+                <StyledTooltip title="Mon Email" arrow={true}>
+                    <a href={`mailto:wi11remi@wiremi.fr?subject=Message provenant du site ${document.title}`} target="_blank" rel="noreferrer">
+                        <img src={Mail} alt="E-mail" className='w-16 md:w-20 md:h-20  md:mx-10' />
                     </a>
                 </StyledTooltip>
             </div>
