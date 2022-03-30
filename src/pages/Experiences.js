@@ -41,7 +41,7 @@ const Experiences = () => {
                     <div className="mt-2 xl:flex xl:flex-wrap xl:justify-center sm:flex sm:flex-wrap sm:justify-center">
                         {ExperiencesInfo.map(item =>
                             <div key={item.id} className={`${selected === item.tag || selected === '' ? '' : 'hidden'}`}>
-                                <div className="border-2 border-div-green rounded-lg w-96 sm:w-72 md:w-96 xl:w-96 flex items-center p-2 m-2 bg-nav-yellow"
+                                <div className="border-2 border-div-green rounded-lg w-86 sm:w-72 md:w-96 xl:w-96 flex items-center p-2 m-2 bg-nav-yellow"
                                 >
                                     <div className='text-center mx-auto'>
                                         <h3 className='text-div-red font-roboto xl:text-xl sm:text-base'>{item.title}</h3>

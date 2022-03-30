@@ -57,7 +57,7 @@ const Navbar = () => {
                                                 <Link
                                                     key={item.name}
                                                     to={item.href}
-                                                    className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white"
+                                                    className="text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white"
                                                 // className={classNames(
                                                 //     item.current ? 'bg-gray-900 text-white' : 'text-white-400 hover:bg-gray-700 hover:text-white',
                                                 //     'px-3 py-2 rounded-md text-sm font-medium'
