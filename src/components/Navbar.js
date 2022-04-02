@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import rw from '../assets/images/logos/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import PDF from '../assets/documents/cvVers2022.pdf';
-import {saveAs} from "file-saver"; 
+import { saveAs } from "file-saver";
 
 const Navbar = () => {
     const navigation = [
@@ -25,7 +25,7 @@ const Navbar = () => {
             "Rémi W - CV.pdf"
         )
     }
-    
+
     return (
         <>
             <Disclosure as="nav" className="bg-nav-greenOp w-full top-0 fixed z-50">
@@ -72,7 +72,8 @@ const Navbar = () => {
                                     </div>
                                 </div>
 
-                            <p onClick={saveFile} className="md:hidden text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>
+                                <p onClick={saveFile} className="md:hidden text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>
+                                
                             </div>
                         </div>
 
