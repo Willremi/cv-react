@@ -93,7 +93,7 @@ const ExperiencesInfo = [
         missions: [
             {
                 id:1,
-                title: "Tri du courrier dans le service permis de conduire / Comission médicale"
+                title: "Tri du courrier dans le service permis de conduire / Commission médicale"
             },
             {
                 id:2,
@@ -111,7 +111,7 @@ const ExperiencesInfo = [
         missions: [
             {
                 id:1,
-                title: "Tri du courrier dans le service permis de conduire / Comission médicale"
+                title: "Tri du courrier dans le service permis de conduire / Commission médicale"
             },
             {
                 id:2,
