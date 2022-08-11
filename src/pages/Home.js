@@ -52,7 +52,7 @@ const Home = () => {
                         <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 md:w-18 h-auto bg-white rounded mx-2 sm:mx-4 ml-4 md:ml-12 md:mx-10' />
                     </a>
                 </StyledTooltip>
-                <StyledTooltip title="Mon Linkedin" arrow={true}>
+                <StyledTooltip title="Mon Twitter" arrow={true}>
                     <a href="https://twitter.com/RmiWill" target="_blank" rel="noreferrer">
                         <img src={Twitter} alt="Twitter" className='w-12 sm:w-20  md:w-18 h-auto bg-white rounded mx-2 sm:mx-10 md:mx-10' />
                     </a>
