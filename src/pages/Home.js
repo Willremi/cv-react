@@ -11,11 +11,11 @@ const Home = () => {
 
     return <>
         <div className="flex items-center justify-center h-screen md:mt-10 xl:mt-0">
-            <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-60'>
-                <img src={Remi} alt="profil" className='w-36 sm:w-56 md:w-52 h-36 sm:h-56 md:h-52 xl:w-40 xl:h-40 rounded-full' />
+            <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-72'>
+                <img src={Remi} alt="profil" className='w-36 sm:w-56 md:w-52 h-36 sm:h-56 md:h-52 xl:w-48 xl:h-48 rounded-full' />
             </div>
 
-            <div className="bg-div-white rounded-lg border shadow-lg p-10 sm:p-16 xl:p-12 sm:px-44 md:px-48 xl:px-48 fixed z-10">
+            <div className="bg-div-white rounded-lg border shadow-lg p-10 sm:p-16 xl:p-16 sm:px-44 md:px-48 xl:px-48 fixed z-10">
                 <h1 className='text-black font-bold font-roboto'>Rémi Willebrouck</h1>
 
                 {/* typewriter */}
@@ -46,7 +46,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="z-20 mt-36 sm:mt-48 xl:mt-40 flex fixed items-center">
+            <div className="z-20 mt-36 sm:mt-48 xl:mt-52 flex fixed items-center">
                 <StyledTooltip title="Mon Linkedin" arrow={true}>
                     <a href="https://www.linkedin.com/in/willremi" target="_blank" rel="noreferrer">
                         <img src={Linkedin} alt="Linkedin" className='w-12 sm:w-20 md:w-18 h-auto bg-white rounded mx-2 sm:mx-4 ml-4 md:ml-12 md:mx-10' />
