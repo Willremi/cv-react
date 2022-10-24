@@ -3,13 +3,13 @@ const SkillsInfo = [
         id: 1,
         name: "HTML 5",
         image: require("../../assets/images/logos/html.png"),
-        href: "https://github.com/Willremi/AFPA-exoCSS"
+        href: "https://github.com/Willremi/carteReseau"
     },
     {
         id: 2,
         name: "CSS 3",
         image: require("../../assets/images/logos/css.png"),
-        href: "https://github.com/Willremi/AFPA-exoCSS"
+        href: "https://github.com/Willremi/carteReseau"
     },
     {
         id: 3,
