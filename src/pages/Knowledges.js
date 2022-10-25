@@ -24,7 +24,7 @@ const Knowledges = () => {
                     <div className="border-t-2 my-4 border-div-green"></div>
                     <div className='flex flex-wrap justify-center'>
                         {SkillsInfo.map(item =>
-                            <div className='w-16 md:w-24 text-center lg:mx-4' key={item.id}>
+                            <div className='w-16 md:w-24 text-center xl:mx-4' key={item.id}>
                                 <a href={item.href} target='_blank' rel="noreferrer">
                                     <img src={item.image} alt={item.name} />
                                     <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
