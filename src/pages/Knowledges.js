@@ -60,7 +60,7 @@ const Knowledges = () => {
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="m-1">
-                                <p className='font-roboto'>
+                                <p className='font-roboto text-red-600 indent-5'>
                                     Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
                                 </p>
                             </div>
