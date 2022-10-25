@@ -32,7 +32,8 @@ const SkillsInfo = [
     {
         id: 6,
         name: "React JS",
-        image: require("../../assets/images/logos/react.png")
+        image: require("../../assets/images/logos/react.png"),
+        href: "https://github.com/Willremi/CourseAuJouet-Frontend"
     },
     {
         id: 7,
@@ -48,7 +49,8 @@ const SkillsInfo = [
     {
         id: 9,
         name: "Node JS",
-        image: require("../../assets/images/logos/node.png")
+        image: require("../../assets/images/logos/node.png"),
+        href: "https://github.com/Willremi/CourseAuJouet-Backend"
     },
     {
         id: 10,
