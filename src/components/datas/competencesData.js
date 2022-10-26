@@ -77,7 +77,8 @@ const SkillsInfo = [
     {
         id: 13,
         name: "Sass",
-        image: require("../../assets/images/logos/sass.png")
+        image: require("../../assets/images/logos/sass.png"),
+        href: "https://github.com/Willremi/SassTutos"
     },
     {
         id: 14,
