@@ -38,13 +38,14 @@ const SkillsInfo = [
     {
         id: 7,
         name: "Tailwind CSS",
-        image: require("../../assets/images/logos/tailwind.png")
+        image: require("../../assets/images/logos/tailwind.png"),
+        href: "https://github.com/Willremi/TailwindTutos"
     },
     {
         id: 8,
         name: "PHP",
         image: require("../../assets/images/logos/php.png"),
-        href: "https://github.com/Willremi/Groupe6/tree/master/PHP"
+        href: "https://github.com/Willremi/Retro-Serie"
     },
     {
         id: 9,

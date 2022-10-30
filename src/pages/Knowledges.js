@@ -56,7 +56,7 @@ const Knowledges = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="border bg-div-white rounded-lg mt-4 p-4  sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
+                        <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="m-1">
