@@ -8,7 +8,7 @@ import Mail from '../assets/images/logos/mail.png'
 import StyledTooltip from '../components/constants/StyledTooltip';
 
 const Home = () => {
-
+        
     return <>
         <div className="flex items-center justify-center h-screen md:mt-10 xl:mt-0">
             <div className='fixed z-20 mb-52 sm:mb-80 xl:mb-72'>
@@ -16,10 +16,10 @@ const Home = () => {
             </div>
 
             <div className="bg-div-white rounded-lg border shadow-lg p-10 sm:p-16 xl:p-16 sm:px-44 md:px-48 xl:px-48 fixed z-10">
-                <h1 className='text-black font-bold font-roboto'>Rémi Willebrouck</h1>
+                <h1 className='text-blue-800 font-bold font-roboto'>Rémi Willebrouck</h1>
 
                 {/* typewriter */}
-                <div className="text-red-400 w-56 sm:w-60 xl:w-72 font-semibold sm:text-lg xl:text-xl">
+                <div className="text-red-500 w-56 sm:w-60 xl:w-72 font-semibold sm:text-lg xl:text-xl">
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter
@@ -59,12 +59,12 @@ const Home = () => {
                 </StyledTooltip>
                 <StyledTooltip title="Mon Github" arrow={true}>
                     <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20 xl:w-18 xl:h-18 mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
+                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20 xl:w-24 xl:h-24 mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Email" arrow={true}>
                     <a href={`mailto:wi11remi@wiremi.fr?subject=Message provenant du site ${document.title}`} target="_blank" rel="noreferrer">
-                        <img src={Mail} alt="E-mail" className='w-16 sm:w-24 md:w-24 xl:w-24 sm:mx-1 md:mx-6 mr-3' />
+                        <img src={Mail} alt="E-mail" className='w-16 sm:w-24 md:w-24 xl:w-28 sm:mx-1 md:mx-6 mr-3' />
                     </a>
                 </StyledTooltip>
             </div>
