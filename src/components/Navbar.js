@@ -61,9 +61,9 @@ const Navbar = () => {
                                                     key={item.name}
                                                     to={item.href}
                                                     // className="text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white"
-                                                className={`text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white ${classNames(
-                                                    (location.pathname === item.href) && activeLink
-                                                )}`}
+                                                    className={`text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white ${classNames(
+                                                        (location.pathname === item.href) && activeLink
+                                                    )}`}
 
                                                 >
                                                     {item.name}
@@ -75,7 +75,7 @@ const Navbar = () => {
                                 </div>
 
                                 <p onClick={saveFile} className="md:hidden text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>
-                                
+
                             </div>
                         </div>
 
