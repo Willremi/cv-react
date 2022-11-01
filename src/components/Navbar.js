@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import rw from '../assets/images/logos/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import PDF from '../assets/documents/cvVers2022.pdf';
@@ -15,9 +15,12 @@ const Navbar = () => {
         { name: 'Contact', href: '/contact', current: false },
     ]
 
-    // function classNames(...classes) {
-    //     return classes.filter(Boolean).join(" ");
-    // }
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(" ");
+    }
+    const activeLink = "xl:text-white";
+
+    const location = useLocation();
 
     const saveFile = () => {
         saveAs(
@@ -57,11 +60,10 @@ const Navbar = () => {
                                                 <Link
                                                     key={item.name}
                                                     to={item.href}
-                                                    className="text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white"
-                                                // className={classNames(
-                                                //     item.current ? 'bg-gray-900 text-white' : 'text-white-400 hover:bg-gray-700 hover:text-white',
-                                                //     'px-3 py-2 rounded-md text-sm font-medium'
-                                                // )}
+                                                    // className="text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white"
+                                                className={`text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white ${classNames(
+                                                    (location.pathname === item.href) && activeLink
+                                                )}`}
 
                                                 >
                                                     {item.name}
@@ -84,11 +86,10 @@ const Navbar = () => {
                                         key={item.name}
                                         as={Link}
                                         to={item.href}
-                                        className="text-div-red hover:bg-div-blue hover:text-white block px-3 py-2 rounded-md text-lg font-semibold"
-                                    // className={classNames(
-                                    //     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                    //     'block px-3 py-2 rounded-md text-base font-medium'
-                                    // )}
+                                        // className="text-div-red hover:bg-div-blue hover:text-white block px-3 py-2 rounded-md text-lg font-semibold"
+                                        className={`text-div-red hover:bg-div-blue hover:text-white block px-3 py-2 rounded-md text-lg font-semibold ${classNames(
+                                            (location.pathname === item.href) && activeLink
+                                        )}`}
                                     // aria-current={item.current ? 'page' : undefined}
                                     >
                                         {item.name}
