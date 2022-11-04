@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <>
-            <Disclosure as="nav" className="bg-nav-greenOp w-full top-0 fixed z-50">
+            <Disclosure as="nav" className="navBar top-0">
                 {({ open }) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -79,7 +79,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <Disclosure.Panel className="lg:hidden bg-nav-greenOp w-full fixed z-50">
+                        <Disclosure.Panel className="lg:hidden navBar">
                             <div className="px-2 pt-2 pb-3 space-y-1">
                                 {navigation.map((item) => (
                                     <Disclosure.Button

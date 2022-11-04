@@ -62,5 +62,7 @@ body {
 }
 
 @layer components {
-  
+    .navBar {
+        @apply bg-nav-greenOp w-full fixed z-50
+    }
 }
