@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import rw from '../assets/images/logos/rw.png';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import PDF from '../assets/documents/cvVers2022.pdf';
+import PDF from '../assets/documents/cvVers2023.pdf';
 import { saveAs } from "file-saver";
 
 const Navbar = () => {
