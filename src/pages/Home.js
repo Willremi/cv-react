@@ -20,14 +20,15 @@ const Home = () => {
 
                 {/* typewriter */}
                 <div className="text-red-500 w-56 sm:w-60 xl:w-72 font-semibold sm:text-lg xl:text-xl">
-                    <Typewriter
+                    <h2>Développeur Web</h2>
+                    {/* <Typewriter
                         onInit={(typewriter) => {
                             typewriter
                                 // .pauseFor(2500)
                                 .changeDelay(80)
-                                .typeString('Développeur Web Junior')
+                                .typeString('Développeur Web')
                                 .pauseFor(500)
-                                .deleteChars(6)
+                                .deleteChars(3)
                                 .typeString('Fullstack')
                                 .pauseFor(500)
                                 .deleteChars(9)
@@ -42,7 +43,7 @@ const Home = () => {
                             autoStart: true,
                             loop: true
                         }}
-                    />
+                    /> */}
                 </div>
             </div>
 
