@@ -1,5 +1,4 @@
 import React from 'react';
-import Typewriter from 'typewriter-effect';
 import Remi from '../assets/images/remi1.jpeg';
 import Twitter from '../assets/images/logos/twitter.png';
 import Linkedin from '../assets/images/logos/linkedin.png';
