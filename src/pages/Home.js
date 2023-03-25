@@ -63,7 +63,7 @@ const Home = () => {
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Email" arrow={true}>
-                    <a href={`mailto:wi11@wiremi.fr?subject=Message provenant du site ${document.title}`} target="_blank" rel="noreferrer">
+                    <a href={`mailto:wi11remi@wiremi.fr?subject=Message provenant du site ${document.title}`} target="_blank" rel="noreferrer">
                         <img src={Mail} alt="E-mail" className='w-16 sm:w-24 md:w-24 xl:w-28 sm:mx-1 md:mx-6 mr-3' />
                     </a>
                 </StyledTooltip>
