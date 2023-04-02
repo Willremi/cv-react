@@ -1,5 +1,5 @@
 import React from 'react';
-import Remi from '../assets/images/remi1.jpeg';
+import Remi from '../assets/images/remi2.jpeg';
 import Twitter from '../assets/images/logos/twitter.png';
 import Linkedin from '../assets/images/logos/linkedin.png';
 import Github from '../assets/images/logos/github.png';

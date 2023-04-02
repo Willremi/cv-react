@@ -170,6 +170,20 @@ const ExperiencesInfo = [
         ],
         tag: "dw"
     },
+    {
+        id: 11,
+        title: "Inventoriste",
+        dates: "3 Mars 2023",
+        location: "Gifi - Liévin",
+        missions: [
+            {
+                id:1,
+                title: "Comptage du nombre d'articles en rayon"
+            }
+
+        ],
+        tag: "inventorist"
+    },
 ];
 
 export default ExperiencesInfo;

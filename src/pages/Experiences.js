@@ -16,6 +16,7 @@ const Experiences = () => {
         { id: "3", name: "Agent contractuel occasionnel", tag: "admin" },
         { id: "4", name: "Technicien en maintenance informatique", tag: "pc" },
         { id: "5", name: "Contrôleur Non destructif", tag: "cnd" },
+        { id: "5", name: "Inventoriste", tag: "inventorist" },
     ]
 
     const selectionExp = (e) => {
