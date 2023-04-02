@@ -101,7 +101,7 @@ const ExperiencesInfo = [
             },
             
         ],
-        tag: "admin"
+        tag: "other"
     },
     {
         id: 7,
@@ -119,7 +119,7 @@ const ExperiencesInfo = [
             },
             
         ],
-        tag: "admin"
+        tag: "other"
     },
     {
         id: 8,
@@ -150,7 +150,7 @@ const ExperiencesInfo = [
             },
 
         ],
-        tag: "logistic"
+        tag: "other"
     },
     {
         id: 10,
@@ -182,7 +182,7 @@ const ExperiencesInfo = [
             }
 
         ],
-        tag: "inventorist"
+        tag: "other"
     },
 ];
 
