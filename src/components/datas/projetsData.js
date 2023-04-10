@@ -31,7 +31,7 @@ const Projets = [
         id: 2,
         title: "Rétro Série",
         dates: "2020 - 2021",
-        description: "Site recensant les anciennes avant les années 2010",
+        description: "Site recensant les anciennes séries avant les années 2010",
         images: [
             {
                 id: 1,
