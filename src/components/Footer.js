@@ -7,7 +7,7 @@ const Footer = () => {
     // console.log('location', location.pathname);
 
     return (
-        <div className={`mt-6 p-4 bg-nav-greenOp bottom-0 left-0 w-full fixed z-50`}>
+        <div className={`mt-6 p-4 bottom-0 left-0 navBar`}>
             <div className="text-center text-div-red font-police font-semibold">© {year} - Rémi W.</div>
         </div>
     );

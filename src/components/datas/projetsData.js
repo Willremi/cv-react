@@ -11,7 +11,7 @@ const Projets = [
             },
             {
                 id: 2,
-                src: require('../../assets/images/projets/RTo1.png')
+                src: require('../../assets/images/projets/RTo2.png')
             },
         ],
         technos: [
@@ -31,7 +31,7 @@ const Projets = [
         id: 2,
         title: "Rétro Série",
         dates: "2020 - 2021",
-        description: "Site recensant les anciennes avant les années 2010",
+        description: "Site recensant les anciennes séries avant les années 2010",
         images: [
             {
                 id: 1,
@@ -74,7 +74,7 @@ const Projets = [
     {
         id: 3,
         title: "Carte interactive",
-        dates: "2020",
+        dates: "2020 - 2022",
         description: "Implantation des groupes adhérents du Réseau T0",
         images: [
             {
@@ -83,7 +83,7 @@ const Projets = [
             },
             {
                 id:2,
-                src: require('../../assets/images/projets/france1.png')
+                src: require('../../assets/images/projets/france2.png')
             }
         ],
         technos: [

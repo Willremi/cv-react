@@ -24,7 +24,7 @@ const Knowledges = () => {
                     <div className="border-t-2 my-4 border-div-green"></div>
                     <div className='flex flex-wrap justify-center'>
                         {SkillsInfo.map(item =>
-                            <div className='w-16 md:w-24 text-center' key={item.id}>
+                            <div className='w-16 md:w-24 text-center xl:mx-4' key={item.id}>
                                 <a href={item.href} target='_blank' rel="noreferrer">
                                     <img src={item.image} alt={item.name} />
                                     <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
@@ -56,12 +56,12 @@ const Knowledges = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="border bg-div-white rounded-lg mt-4 p-4  sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
+                        <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="m-1">
-                                <p className='font-roboto'>
-                                    Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réffléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
+                                <p className='font-roboto text-red-600 indent-5'>
+                                    Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
                                 </p>
                             </div>
                         </div>
