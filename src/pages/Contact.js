@@ -11,12 +11,12 @@ const encode = (data) => {
 }
 
 (function(){
-    EmailJS.init("CkWCL3uOwKfTyRGkP");
+    EmailJS.init("{process.env.REACT_APP_PUBLIC_KEY}");
  })();
 
 const sendFeedBack = (serviceId, templateId, variables) => {
     EmailJS
-    .send(serviceId, templateId, variables, "CkWCL3uOwKfTyRGkP")
+    .send(serviceId, templateId, variables, "{process.env.REACT_APP_PUBLIC_KEY}")
     .then((res) => {
         console.log("success");
     })
