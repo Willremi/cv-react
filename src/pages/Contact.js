@@ -18,7 +18,7 @@ const Contact = () => {
                 <h1 className='text-center text-div-blue font-roboto font-semibold'>Me contacter</h1>
                 <div className="border-t-2 my-4 border-div-green"></div>
                 <Formik
-                    initialValues={{ name: '', email: '', message: '' }}
+                    initialValues={{ name: '', email: '', subject: '', message: '' }}
                     validationSchema={validationSchema}
                     onSubmit={(values, { setSubmitting, resetForm }) => {
                         fetch("/?no-cache=1", {
@@ -69,6 +69,14 @@ const Contact = () => {
                                 name="email"
                             />
                             {touched.email && errors.email && <span className='text-div-red'>{errors.email}</span>}
+                            <label htmlFor="subject">Sujet</label>
+                            <Field
+                                as="input"
+                                type="text"
+                                name="subject"
+                                className=""
+                            />
+                            {touched.subject && errors.subject && <span className='text-div-red'>{errors.subject}</span>}
 
                             <label htmlFor="message" className='mt-2'>Votre message</label>
                             <Field
