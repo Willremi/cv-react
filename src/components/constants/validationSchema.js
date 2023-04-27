@@ -12,7 +12,7 @@ const validationSchema = Yup.object().shape({
   subject: Yup.string()
     .min(2, 'nom trop court!')
     .max(50, 'nom trop long!')
-    .matches(/^[\p{L}\s]{2,}$/u, "Le nom n'est pas au bon format"),
+    .matches(/^[\p{L}\s]{2,}$/u, "Le sujet n'est pas au bon format"),
   message: Yup.string()
     .required('Votre message est obligatoire!'),
 })
