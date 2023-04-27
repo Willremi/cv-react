@@ -75,8 +75,8 @@ const Contact = () => {
                         <form name='contact'
                             onSubmit={handleSubmit}
                             onReset={handleReset}
-                            // data-netlify='true'
-                            // data-netlify-honeypot='bot-field'
+                            data-netlify='true'
+                            data-netlify-honeypot='bot-field'
                             className='flex flex-col xl:w-1/2 sm:mx-20 xl:mx-auto'
                         >
                             {/* Réel formulaire */}
