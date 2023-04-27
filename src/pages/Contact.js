@@ -34,11 +34,7 @@ const Contact = () => {
                 <h1 className='text-center text-div-blue font-roboto font-semibold'>Me contacter</h1>
                 <div className="border-t-2 my-4 border-div-green"></div>
                 <Formik
-<<<<<<< HEAD
                     initialValues={{ name: '', email: '', subject: '', message: '' }}
-=======
-                    initialValues={{ name: '', email: '',subject: '', message: '' }}
->>>>>>> contact
                     validationSchema={validationSchema}
                     onSubmit={(values, { setSubmitting, resetForm }) => {
                         fetch("/?no-cache=1", {
