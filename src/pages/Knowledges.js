@@ -116,7 +116,7 @@ const Knowledges = () => {
                                                             )}
                                                         </div>
                                                         <div className=" overflow-auto max-h-44 mx-10 mt-2">
-                                                        <img src={modalData.images[1].src} alt={modalData.title} />    
+                                                        <img src={modalData.images[1].src} alt={modalData.title} /> 
                                                         </div>
                                                     </div>
                                                     {/*footer*/}

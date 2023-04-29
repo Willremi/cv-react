@@ -83,6 +83,10 @@ const Projets = [
             },
             {
                 id:2,
+                src: require('../../assets/images/projets/france3.png')
+            },
+            {
+                id:3,
                 src: require('../../assets/images/projets/france2.png')
             }
         ],
