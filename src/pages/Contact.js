@@ -11,12 +11,12 @@ const encode = (data) => {
 }
 
 (function(){
-    EmailJS.init("{process.env.REACT_APP_PUBLIC_KEY}");
+    EmailJS.init("CkWCL3uOwKfTyRGkP");
  })();
 
 const sendFeedBack = (serviceId, templateId, variables) => {
     EmailJS
-    .send(serviceId, templateId, variables, "{process.env.REACT_APP_PUBLIC_KEY}")
+    .send(serviceId, templateId, variables, "CkWCL3uOwKfTyRGkP")
     .then((res) => {
         console.log("success");
     })
@@ -94,15 +94,6 @@ const Contact = () => {
                                 name="email"
                             />
                             {touched.email && errors.email && <span className='text-div-red'>{errors.email}</span>}
-                            <label htmlFor="subject">Sujet</label>
-                            <Field
-                                as="input"
-                                type="text"
-                                name="subject"
-                                className=""
-                            />
-                            {touched.subject && errors.subject && <span className='text-div-red'>{errors.subject}</span>}
-
                             <label htmlFor="subject">Sujet</label>
                             <Field
                                 as="input"
