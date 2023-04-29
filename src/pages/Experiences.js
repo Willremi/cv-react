@@ -12,10 +12,9 @@ const Experiences = () => {
     const options = [
         { id: "0", name: "Sélectionnez la profession", tag: "" },
         { id: "1", name: "Développeur Web", tag: "dw" },
-        { id: "2", name: "Agent d'exploitation logistique", tag: "logistic" },
-        { id: "3", name: "Agent contractuel occasionnel", tag: "admin" },
-        { id: "4", name: "Technicien en maintenance informatique", tag: "pc" },
-        { id: "5", name: "Contrôleur Non destructif", tag: "cnd" },
+        { id: "3", name: "Technicien en maintenance informatique", tag: "pc" },
+        { id: "4", name: "Contrôleur Non destructif", tag: "cnd" },
+        {id:"5", name: "Autres métiers", tag: "other"},
     ]
 
     const selectionExp = (e) => {

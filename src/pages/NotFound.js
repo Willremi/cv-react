@@ -1,6 +1,6 @@
 import React from 'react';
 import {saveAs} from "file-saver";
-import PDF from '../assets/documents/cvVers2022.pdf';
+import PDF from '../assets/documents/cv.pdf';
 
 const NotFound = () => {
     const saveFile = () => {

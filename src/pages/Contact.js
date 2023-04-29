@@ -2,11 +2,27 @@ import { Field, Formik } from 'formik';
 import React, { useState } from 'react';
 import validationSchema from '../components/constants/validationSchema';
 import Logo from '../assets/images/logos/rw.png'
+import EmailJS from '@emailjs/browser';
 
 const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
+}
+
+(function(){
+    EmailJS.init("CkWCL3uOwKfTyRGkP");
+ })();
+
+const sendFeedBack = (serviceId, templateId, variables) => {
+    EmailJS
+    .send(serviceId, templateId, variables, "CkWCL3uOwKfTyRGkP")
+    .then((res) => {
+        console.log("success");
+    })
+    .catch((err) => {
+        console.error("Il y a une erreur");
+    })
 }
 
 const Contact = () => {
@@ -18,7 +34,7 @@ const Contact = () => {
                 <h1 className='text-center text-div-blue font-roboto font-semibold'>Me contacter</h1>
                 <div className="border-t-2 my-4 border-div-green"></div>
                 <Formik
-                    initialValues={{ name: '', email: '', message: '' }}
+                    initialValues={{ name: '', email: '', subject: '', message: '' }}
                     validationSchema={validationSchema}
                     onSubmit={(values, { setSubmitting, resetForm }) => {
                         fetch("/?no-cache=1", {
@@ -38,6 +54,14 @@ const Contact = () => {
                             .catch(err => {
                                 alert('Erreur : Essayez encore s\'il vous plaît!')
                                 setSubmitting(false)
+                            });
+                            const templateId = "template_1zi649q";
+                            const serviceId = "portfolio_wiremi";
+                            sendFeedBack(serviceId, templateId, {
+                                name: values.name,
+                                email: values.email,
+                                subject: values.subject,
+                                message: values.message
                             })
                     }}
                 >
@@ -55,6 +79,7 @@ const Contact = () => {
                             data-netlify-honeypot='bot-field'
                             className='flex flex-col xl:w-1/2 sm:mx-20 xl:mx-auto'
                         >
+                            {/* Réel formulaire */}
                             <label htmlFor="name">Votre nom</label>
                             <Field
                                 as="input"
@@ -69,6 +94,14 @@ const Contact = () => {
                                 name="email"
                             />
                             {touched.email && errors.email && <span className='text-div-red'>{errors.email}</span>}
+                            <label htmlFor="subject">Sujet</label>
+                            <Field
+                                as="input"
+                                type="text"
+                                name="subject"
+                                className=""
+                            />
+                            {touched.subject && errors.subject && <span className='text-div-red'>{errors.subject}</span>}
 
                             <label htmlFor="message" className='mt-2'>Votre message</label>
                             <Field
@@ -77,6 +110,45 @@ const Contact = () => {
                                 rows={2}
                             />
                             {touched.message && errors.message && <span className='text-div-red'>{errors.message}</span>}
+
+                            {/* Pot de miel */}
+                            <label htmlFor="name" className='honey'>Votre nom</label>
+                            <Field
+                                as="input"
+                                type="text"
+                                name="name"
+                                className="honey"
+                                autoComplete="off"
+                            />
+                            {/* {touched.name && errors.name && <span className='text-div-red'>{errors.name}</span>} */}
+                            <label htmlFor="email" className='mt-2 honey'>Votre email</label>
+                            <Field
+                                type="email"
+                                name="email"
+                                className="honey"
+                                autoComplete="off"
+                            />
+                            {/* {touched.email && errors.email && <span className='text-div-red'>{errors.email}</span>} */}
+
+                            <label htmlFor="subject" className='honey'>Sujet</label>
+                            <Field
+                                as="input"
+                                type="text"
+                                name="subject"
+                                className="honey"
+                                autoComplete="off"
+                            />
+                            {/* {touched.subject && errors.subject && <span className='text-div-red'>{errors.subject}</span>} */}
+
+                            <label htmlFor="message" className='mt-2 honey'>Votre message</label>
+                            <Field
+                                as="textarea"
+                                name="message"
+                                className="honey"
+                                autoComplete="off"
+                                rows={2}
+                            />
+                            {/* {touched.message && errors.message && <span className='text-div-red'>{errors.message}</span>} */}
 
                             <div className="flex mt-6">
                                 <button type="reset" className='border-2 border-div-red bg-div-red w-2/5 xl:w-1/3 p-1 mx-auto rounded-md text-white hover:bg-white hover:text-div-red font-semibold'>Annuler</button>

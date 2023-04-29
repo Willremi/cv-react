@@ -101,7 +101,7 @@ const ExperiencesInfo = [
             },
             
         ],
-        tag: "admin"
+        tag: "other"
     },
     {
         id: 7,
@@ -119,7 +119,7 @@ const ExperiencesInfo = [
             },
             
         ],
-        tag: "admin"
+        tag: "other"
     },
     {
         id: 8,
@@ -150,7 +150,7 @@ const ExperiencesInfo = [
             },
 
         ],
-        tag: "logistic"
+        tag: "other"
     },
     {
         id: 10,
@@ -169,6 +169,20 @@ const ExperiencesInfo = [
 
         ],
         tag: "dw"
+    },
+    {
+        id: 11,
+        title: "Inventoriste",
+        dates: "3 Mars 2023",
+        location: "Gifi - Liévin",
+        missions: [
+            {
+                id:1,
+                title: "Comptage du nombre d'articles en rayon"
+            }
+
+        ],
+        tag: "other"
     },
 ];
 
