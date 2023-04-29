@@ -4,6 +4,8 @@ import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import Projets from '../components/datas/projetsData';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 // import { Icon } from '@iconify/react';
 
 const Knowledges = () => {
@@ -105,18 +107,26 @@ const Knowledges = () => {
                                                         </p>
                                                         <div className="flex justify-center">
                                                             {modalData.technos.map(elt =>
-                                                                
+
                                                                 <div key={elt.id}
-                                                                className="mx-2 px-2"
+                                                                    className="mx-2 px-2"
                                                                 >
                                                                     <img src={elt.logo} alt={elt.title}
-                                                                    className="w-10 xl:w-12 h-auto"
+                                                                        className="w-10 xl:w-12 h-auto"
                                                                     />
                                                                 </div>
                                                             )}
                                                         </div>
                                                         <div className=" overflow-auto max-h-44 mx-10 mt-2">
-                                                        <img src={modalData.images[1].src} alt={modalData.title} /> 
+                                                            <Carousel useKeyboardArrows={true} showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000} showStatus={false}>
+                                                                {modalData.images.slice(1).map(elt =>
+                                                                    <div key={elt.id} className='slide'>
+                                                                        {elt.legend && <h6 className='mb-2 text-div-blue font-semibold'>"{elt.legend}"</h6>}
+                                                                        <img src={elt.src} alt={elt.id} />
+                                                                    </div>
+                                                                )}
+                                                            </Carousel>
+                                                            {/* <img src={modalData.images[1].src} alt={modalData.title} />  */}
                                                         </div>
                                                     </div>
                                                     {/*footer*/}

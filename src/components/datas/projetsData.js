@@ -74,7 +74,7 @@ const Projets = [
     {
         id: 3,
         title: "Carte interactive",
-        dates: "2020 - 2022",
+        dates: "2020 - 2023",
         description: "Implantation des groupes adhérents du Réseau T0",
         images: [
             {
@@ -83,11 +83,13 @@ const Projets = [
             },
             {
                 id:2,
-                src: require('../../assets/images/projets/france3.png')
+                src: require('../../assets/images/projets/france2.png'),
+                legend: "Carte faite en 2022 sans l'aide d'un logiciel de traitement de l'image"
             },
             {
                 id:3,
-                src: require('../../assets/images/projets/france2.png')
+                src: require('../../assets/images/projets/france3.png'),
+                legend: "Carte faite en 2023 avec l'aide d'un logiciel de traitement de l'image"
             }
         ],
         technos: [
