@@ -4,8 +4,10 @@ import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import Projets from '../components/datas/projetsData';
+import Outils from '../components/datas/outilsData.js';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import StyledTooltip from '../components/constants/StyledTooltip.js';
 // import { Icon } from '@iconify/react';
 
 const Knowledges = () => {
@@ -58,15 +60,28 @@ const Knowledges = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
-                            <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
+                        <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36 w-auto">
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="m-1">
-                                <p className='font-roboto text-red-600 indent-5'>
-                                    Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
-                                </p>
+                            <div className="m-1 flex">
+                                {Outils.map(elt =>
+                                    <div key={elt.id}>
+                                        <StyledTooltip title={elt.name} arrow={true}>
+                                            <img src={elt.logo} alt="" />
+                                        </StyledTooltip>
+                                    </div>
+                                )}
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="border bg-div-white rounded-lg mt-4 p-4 mx-5 md:mx-36">
+                    <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
+                    <div className="border-t-2 my-4 border-div-green"></div>
+                    <div className="m-1">
+                        <p className='font-roboto text-red-600 indent-5'>
+                            Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
+                        </p>
                     </div>
                 </div>
                 {/* Projets */}
