@@ -4,6 +4,7 @@ const Projets = [
         title: "Réseau T0",
         dates: "2017 - en cours",
         description: "Site regroupant les Théâtres de l'Opprimé en France et dans les autres pays",
+        lien: "https://www.reseau-to.fr/site",
         images: [
             {
                 id: 1,
@@ -32,6 +33,7 @@ const Projets = [
         title: "Rétro Série",
         dates: "2020 - 2021",
         description: "Site recensant les anciennes séries avant les années 2010",
+        lien: "http://retrotv.wiremi.fr", 
         images: [
             {
                 id: 1,
@@ -76,6 +78,7 @@ const Projets = [
         title: "Carte interactive",
         dates: "2020 - 2023",
         description: "Implantation des groupes adhérents du Réseau T0",
+        lien: "https://rezoto.wiremi.fr",
         images: [
             {
                 id: 1,

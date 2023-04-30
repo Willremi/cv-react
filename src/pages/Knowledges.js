@@ -145,9 +145,10 @@ const Knowledges = () => {
                                                         </div>
                                                     </div>
                                                     {/*footer*/}
-                                                    <div className="flex items-center justify-end p-4 mx-4 border-t border-solid border-div-green rounded-b">
+                                                    <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
+                                                            {modalData.lien && <a href={modalData.lien}><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}    
                                                         <button
-                                                            className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                                            className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                                                             type="button"
                                                             onClick={() => setShowModal(false)}
                                                         >
