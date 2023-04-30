@@ -184,6 +184,28 @@ const ExperiencesInfo = [
         ],
         tag: "other"
     },
+    {
+        id: new Date().getFullYear(),
+        title: "Technicien Sytèmes et Réseaux",
+        dates: "2018 - en cours",
+        location: "Repair Café - Liévin",
+        missions: [
+            {
+                id:1,
+                title: "Installation de Windows sur des ordinateurs"
+            },
+            {
+                id:2,
+                title: "Installation et dépannage des imprimantes"
+            },
+            {
+                id:3,
+                title: "Dépannage du réseau internet"
+            }
+
+        ],
+        tag: "pc"
+    },
 ];
 
 export default ExperiencesInfo;
