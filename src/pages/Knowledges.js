@@ -126,9 +126,11 @@ const Knowledges = () => {
                                                                 <div key={elt.id}
                                                                     className="mx-2 px-2"
                                                                 >
-                                                                    <img src={elt.logo} alt={elt.title}
-                                                                        className="w-10 xl:w-12 h-auto"
-                                                                    />
+                                                                    <StyledTooltip title={elt.title} arrow={true}>
+                                                                        <img src={elt.logo} alt={elt.title}
+                                                                            className="w-10 xl:w-12 h-auto"
+                                                                        />
+                                                                    </StyledTooltip>
                                                                 </div>
                                                             )}
                                                         </div>
@@ -146,7 +148,7 @@ const Knowledges = () => {
                                                     </div>
                                                     {/*footer*/}
                                                     <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
-                                                            {modalData.lien && <a href={modalData.lien}><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}    
+                                                        {modalData.lien && <a href={modalData.lien}><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
                                                         <button
                                                             className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                                                             type="button"

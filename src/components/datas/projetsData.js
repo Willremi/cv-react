@@ -25,6 +25,16 @@ const Projets = [
                 id:2,
                 title: "CSS",
                 logo: require('../../assets/images/logos/css.png')
+            },
+            {
+                id:3,
+                title: "PHP",
+                logo: require('../../assets/images/logos/php.png')
+            },
+            {
+                id:4,
+                title: "MySQL",
+                logo: require('../../assets/images/logos/mysql.png')
             }
         ]
     },

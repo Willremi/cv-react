@@ -55,11 +55,16 @@ const SkillsInfo = [
     },
     {
         id: 10,
+        name: "JSON",
+        image: require("../../assets/images/logos/json.png")
+    },
+    {
+        id: 11,
         name: "MySQL",
         image: require("../../assets/images/logos/mysql.png")
     },
     {
-        id: 11,
+        id: 12,
         name: "MongoDB",
         image: require("../../assets/images/logos/mongodb.png")
     },
@@ -70,23 +75,24 @@ const SkillsInfo = [
     //        href: "https://github.com/Willremi/Groupe6/tree/master/symfony"
     //    },
     {
-        id: 12,
+        id: 13,
         name: "Symfony 6",
         image: require("../../assets/images/logos/symfony.png"),
         href: "https://github.com/Willremi/apiSymfonyResoTo"
     },
     {
-        id: 13,
+        id: 14,
         name: "Sass",
         image: require("../../assets/images/logos/sass.png"),
         href: "https://github.com/Willremi/SassTutos"
     },
     {
-        id: 14,
+        id: 15,
         name: "Wordpress",
         image: require("../../assets/images/logos/wordpress.png"),
         href: "https://www.reseau-to.fr/"
     },
+    
 
 ];
 
