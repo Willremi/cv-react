@@ -6,36 +6,41 @@ const Outils = [
     },
     {
         id: 2,
+        name: "Terminal",
+        logo: require('../../assets/images/logos/terminal.png')
+    },
+    {
+        id: 3,
         name: "Mozilla Firefox",
         logo: require('../../assets/images/logos/firefox.png')
     },
     {
-        id: 3,
+        id: 4,
         name: "Laragon",
         logo: require('../../assets/images/logos/laragon.png')
     },
     {
-        id: 4,
+        id: 5,
         name: "MAMP",
         logo: require('../../assets/images/logos/mamp.png')
     },
     {
-        id: 5,
+        id: 6,
         name: "FileZilla",
         logo: require('../../assets/images/logos/filezilla.png')
     },
     {
-        id: 6,
+        id: 7,
         name: "Git",
         logo: require('../../assets/images/logos/git.png')
     },
     {
-        id: 7,
+        id: 8,
         name: "Postman",
         logo: require('../../assets/images/logos/postman.png')
     },
     {
-        id: 8,
+        id: 9,
         name: "Discord",
         logo: require('../../assets/images/logos/discord.png')
     },

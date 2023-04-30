@@ -63,9 +63,9 @@ const Knowledges = () => {
                         <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36 w-auto">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="m-1 flex">
+                            <div className="flex">
                                 {Outils.map(elt =>
-                                    <div key={elt.id}>
+                                    <div key={elt.id} className='mx-1'>
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt="" />
                                         </StyledTooltip>
@@ -132,7 +132,7 @@ const Knowledges = () => {
                                                                 </div>
                                                             )}
                                                         </div>
-                                                        <div className=" overflow-auto max-h-44 mx-10 mt-2">
+                                                        <div className="overflow-auto max-h-44 mx-10 mt-2">
                                                             <Carousel useKeyboardArrows={true} showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000} showStatus={false}>
                                                                 {modalData.images.slice(1).map(elt =>
                                                                     <div key={elt.id} className='slide'>
