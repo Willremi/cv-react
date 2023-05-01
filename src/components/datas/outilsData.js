@@ -1,7 +1,7 @@
 const Outils = [
     {
         id: 1,
-        name: "Visual Studio Code",
+        name: "VS Code",
         logo: require('../../assets/images/logos/vscode.png')
     },
     {
@@ -11,7 +11,7 @@ const Outils = [
     },
     {
         id: 3,
-        name: "Mozilla Firefox",
+        name: "Firefox",
         logo: require('../../assets/images/logos/firefox.png')
     },
     {

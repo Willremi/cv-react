@@ -28,7 +28,7 @@ const Knowledges = () => {
                     <div className="border-t-2 my-4 border-div-green"></div>
                     <div className='flex flex-wrap justify-center'>
                         {SkillsInfo.map(item =>
-                            <div className='w-16 md:w-24 text-center xl:mx-4' key={item.id}>
+                            <div className={`w-16 md:w-24 text-center xl:mx-4 mb-4`} key={item.id}>
                                 <a href={item.href} target='_blank' rel="noreferrer">
                                     <img src={item.image} alt={item.name} />
                                     <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
@@ -63,12 +63,13 @@ const Knowledges = () => {
                         <div className="border bg-div-white rounded-lg mt-4 p-4 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36 w-auto">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="flex">
+                            <div className="flex flex-wrap xl:flex-nowrap justify-center lg:justify-around">
                                 {Outils.map(elt =>
-                                    <div key={elt.id} className='mx-1'>
+                                    <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 w-20 xl:w-16'>
                                         <StyledTooltip title={elt.name} arrow={true}>
-                                            <img src={elt.logo} alt="" />
+                                            <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
+                                            <span className={`xl:hidden mx-3 ${(elt.name == "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>   
                                     </div>
                                 )}
                             </div>
@@ -148,7 +149,7 @@ const Knowledges = () => {
                                                     </div>
                                                     {/*footer*/}
                                                     <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
-                                                        {modalData.lien && <a href={modalData.lien}><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
+                                                        {modalData.lien && <a href={modalData.lien} rel="noreferrer"><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
                                                         <button
                                                             className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                                                             type="button"
