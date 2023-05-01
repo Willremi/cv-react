@@ -185,7 +185,7 @@ const ExperiencesInfo = [
         tag: "other"
     },
     {
-        id: new Date().getFullYear(),
+        id: new Date().getFullYear(), // Changer l'id à 12 si il y a un emploi
         title: "Technicien Sytèmes et Réseaux",
         dates: "2018 - en cours",
         location: "Repair Café - Liévin",
