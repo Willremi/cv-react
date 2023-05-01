@@ -69,7 +69,7 @@ const Knowledges = () => {
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
-                                            <span className={`xl:hidden mx-3 ${(elt.name == "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>   
+                                            <span className={`xl:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>   
                                     </div>
                                 )}
                             </div>
