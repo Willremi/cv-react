@@ -78,7 +78,7 @@ const SkillsInfo = [
         id: 13,
         name: "Symfony 6",
         image: require("../../assets/images/logos/symfony.png"),
-        href: "https://github.com/Willremi/apiSymfonyResoTo"
+        href: "https://github.com/Willremi/Symfony6"
     },
     {
         id: 14,
