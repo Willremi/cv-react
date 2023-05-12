@@ -5,6 +5,7 @@ import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import Projets from '../components/datas/projetsData';
 import Outils from '../components/datas/outilsData.js';
+import Interets from '../components/datas/interetsData.js';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import StyledTooltip from '../components/constants/StyledTooltip.js';
@@ -83,6 +84,15 @@ const Knowledges = () => {
                         <p className='font-roboto text-red-600 indent-5'>
                             Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
                         </p>
+                        <div className="border-t-2 border-div-green my-3 w-1/2 text-center mx-auto"></div>
+                        <h3 className='text-center mt-1 text-div-blue font-semibold'>Intérêts</h3>
+                        <div className="flex">
+                        {Interets.map(elt => 
+                            <div key={elt.id} className='mx-1'>
+                                <span>{elt.name}</span>
+                            </div>    
+                        )}
+                        </div>
                     </div>
                 </div>
                 {/* Projets */}
