@@ -11,7 +11,7 @@ const interetsInfo = [
     },
     {
         id: 3,
-        name: "Les Bandes dessinées",
+        name: "Les BDs",
         icon: require('../../assets/images/icons/comic.png')
     },
     {

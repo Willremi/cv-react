@@ -85,11 +85,13 @@ const Knowledges = () => {
                             Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.
                         </p>
                         <div className="border-t-2 border-div-green my-3 w-1/2 text-center mx-auto"></div>
-                        <h3 className='text-center mt-1 text-div-blue font-semibold'>Intérêts</h3>
-                        <div className="flex">
+                        <h2 className='text-center mt-1 text-div-blue font-semibold'>Intérêts</h2>
+                        <div className="flex justify-around mt-4">
                         {Interets.map(elt => 
-                            <div key={elt.id} className='mx-1'>
-                                <span>{elt.name}</span>
+                            <div key={elt.id}>
+                                <StyledTooltip title={elt.name}  arrow={true}>
+                                    <img src={elt.icon} alt={elt.name} />
+                                </StyledTooltip>
                             </div>    
                         )}
                         </div>
