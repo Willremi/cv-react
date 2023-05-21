@@ -123,6 +123,22 @@ const FormationsInfo = [
             },
         ]
     },
+    {
+        id: 9,
+        title: "Formation Technicien Supérieur Systèmes et Réseaux",
+        dates: "30/05/2023 au 15/02/2024",
+        location: "AFCI - Arras",
+        // actions: [
+        //     {
+        //         id: 1,
+        //         description: "Montée en compétence en utilisant React JS et NodeJs"
+        //     },
+        //     {
+        //         id: 2,
+        //         description: "Réalisation d'un site web e-commerce"
+        //     },
+        // ]
+    },
 ]
 
 export default FormationsInfo;
