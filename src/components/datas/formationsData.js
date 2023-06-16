@@ -126,7 +126,7 @@ const FormationsInfo = [
     {
         id: 9,
         title: "Formation Technicien Supérieur Systèmes et Réseaux",
-        dates: "30/05/2023 au 15/02/2024",
+        dates: "05/06/2023 au 02/02/2024",
         location: "AFCI - Arras",
         // actions: [
         //     {
