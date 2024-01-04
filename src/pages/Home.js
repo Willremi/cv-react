@@ -1,6 +1,7 @@
 import React from 'react';
 import Remi from '../assets/images/remi2.jpeg';
-import Twitter from '../assets/images/logos/twitter.png';
+/* import Twitter from '../assets/images/logos/twitter.png'; */
+import Twitter from '../assets/images/logos/twitterX.jpg';
 import Linkedin from '../assets/images/logos/linkedin.png';
 import Github from '../assets/images/logos/github.png';
 import Mail from '../assets/images/logos/mail.png'
@@ -59,7 +60,7 @@ const Home = () => {
                 </StyledTooltip>
                 <StyledTooltip title="Mon Github" arrow={true}>
                     <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20 xl:w-24 xl:h-24 mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
+                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20  mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Email" arrow={true}>
