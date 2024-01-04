@@ -60,7 +60,7 @@ const Home = () => {
                 </StyledTooltip>
                 <StyledTooltip title="Mon Github" arrow={true}>
                     <a href="https://github.com/Willremi" target="_blank" rel="noreferrer">
-                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20  mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
+                        <img src={Github} alt="Github" className='w-14 sm:w-20 sm:h-20 mx-2 bg-white rounded-full sm:mx-8 md:mx-10' />
                     </a>
                 </StyledTooltip>
                 <StyledTooltip title="Mon Email" arrow={true}>
