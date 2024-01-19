@@ -185,7 +185,7 @@ const ExperiencesInfo = [
         tag: "other"
     },
     {
-        id: new Date().getFullYear(), // Changer l'id à 12 si il y a un emploi
+        id: 12, // Changer l'id à 12 si il y a un emploi
         title: "Technicien Sytèmes et Réseaux",
         dates: "2018 - en cours",
         location: "Repair Café - Liévin",
@@ -201,6 +201,28 @@ const ExperiencesInfo = [
             {
                 id:3,
                 title: "Dépannage du réseau internet"
+            }
+
+        ],
+        tag: "pc"
+    },
+    {
+        id: new Date().getFullYear(), // Changer l'id à 12 si il y a un emploi
+        title: "Technicien Sytèmes et Réseaux",
+        dates: "13/11/2023 - 12/01/2024",
+        location: "Mairie - Liévin",
+        missions: [
+            {
+                id:1,
+                title: "Création de formulaire d'envoi de mail en powershell"
+            },
+            {
+                id:2,
+                title: "Création de serveur de fichier sous linux"
+            },
+            {
+                id:3,
+                title: "Déploiement de Windows 10"
             }
 
         ],
