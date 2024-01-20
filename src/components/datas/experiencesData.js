@@ -222,7 +222,7 @@ const ExperiencesInfo = [
             },
             {
                 id:3,
-                title: "Déploiement de Windows 10"
+                title: "Déploiement de Windows 10 sur plusieurs postes en réseau"
             }
 
         ],
