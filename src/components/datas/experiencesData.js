@@ -207,7 +207,7 @@ const ExperiencesInfo = [
         tag: "pc"
     },
     {
-        id: new Date().getFullYear(), // Changer l'id à 12 si il y a un emploi
+        id: 13, // Changer l'id à 12 si il y a un emploi
         title: "Technicien Sytèmes et Réseaux",
         dates: "13/11/2023 - 12/01/2024",
         location: "Mairie - Liévin",
@@ -223,6 +223,28 @@ const ExperiencesInfo = [
             {
                 id:3,
                 title: "Déploiement de Windows 10 sur plusieurs postes en réseau"
+            }
+
+        ],
+        tag: "pc"
+    },
+    {
+        id: new Date().getFullYear(), // Changer l'id à 12 si il y a un emploi
+        title: "Technicien support informatique",
+        dates: "25/03/2024 - 16/04/2024",
+        location: "Helpline - Marq-en-Baroeul",
+        missions: [
+            {
+                id:1,
+                title: "Optimisation d'Outlook et Teams : Résolution des incidents d'affichage et de connexion."
+            },
+            {
+                id:2,
+                title: "Résolution des incidents de synchronisation d’OneDrive, OneNote, Outlook"
+            },
+            {
+                id:3,
+                title: "Résolution des incidents de connexion sur Citrix, Windows et Cisco Jabber"
             }
 
         ],
