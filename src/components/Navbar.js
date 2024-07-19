@@ -15,7 +15,8 @@ const Navbar = () => {
             href: '/competences', 
             current: false,
             submenu: [
-                { name: 'DWWM', href: '/competences/dwwm' }
+                { name: 'DWWM', href: '/competences/dwwm' },
+                { name: 'TSSR', href: '/competences/tssr' }
             ] 
         },
         { name: 'Formations', href: '/formations', current: false },
@@ -71,7 +72,7 @@ const Navbar = () => {
                                                     >
                                                         {item.name}
                                                     </Link>
-                                                    {/* {item.submenu && (
+                                                    {item.submenu && (
                                                         <div className="absolute left-0 hidden mt-2 bg-white shadow-lg group-hover:block">
                                                             {item.submenu.map((subitem) => (
                                                                 <Link
@@ -83,7 +84,7 @@ const Navbar = () => {
                                                                 </Link>
                                                             ))}
                                                         </div>
-                                                    )} */}
+                                                    )}
                                                 </div>
                                             ))}
                                             <p onClick={saveFile} className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>

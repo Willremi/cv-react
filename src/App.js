@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Dwwm from './pages/Dwwm';
+import Tssr from './pages/Tssr';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/competences' element={<Knowledges />} />
         <Route path='/competences/DWWM' element={<Dwwm />} />
+        <Route path='/competences/tssr' element={<Tssr />} />
         <Route path='/formations' element={<Formations />} />
         <Route path='/experiences' element={<Experiences />} />
         <Route path='/contact' element={<Contact />} />
