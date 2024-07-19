@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/competences' element={<Knowledges />} />
+        {/* <Route path='/competences' element={<Knowledges />} /> */}
         <Route path='/formations' element={<Formations />} />
         <Route path='/experiences' element={<Experiences />} />
         <Route path='/contact' element={<Contact />} />
