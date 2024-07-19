@@ -7,6 +7,7 @@ import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import StyledTooltip from "../components/constants/StyledTooltip";
+import { Carousel } from "react-responsive-carousel";
 
 const Dwwm = () => {
     Projets.sort(function (a, b) {
@@ -18,11 +19,12 @@ const Dwwm = () => {
 
     return (
         <div className='flex items-center justify-center mt-20 mb-20'>
+            {/* page Compétences */}
             <div>
-                <div className="bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-3">
-                    <h1 className="text-center text-div-blue font-roboto font-semibold">Technologie en développement</h1>
+                <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-3'>
+                    <h1 className='text-center text-div-blue font-roboto font-semibold'>Technologies en développement</h1>
                     <div className="border-t-2 my-4 border-div-green"></div>
-                    <div className="flex flex-wrap justify-center">
+                    <div className='flex flex-wrap justify-center'>
                         {DwwmInfo.map(item =>
                             <div className={`w-16 md:w-24 text-center xl:mx-4 mb-4`} key={item.id}>
                                 <a href={item.href} target='_blank' rel="noreferrer">
@@ -31,6 +33,7 @@ const Dwwm = () => {
                                 </a>
                             </div>
                         )}
+
                     </div>
                 </div>
                 <div className="md:flex">
@@ -91,7 +94,90 @@ const Dwwm = () => {
                         </div>
                     </div>
                 </div>
+                {/* Projets */}
+                <div className="border bg-div-white rounded-lg mx-5 md:mx-36 mt-4 p-4">
+                    <h2 className="text-center text-div-blue font-roboto font-semibold">Projets</h2>
+                    <div className="border-t-2 my-4 border-div-green"></div>
+                    <div className="flex flex-wrap justify-around">
+                        {Projets.map(item =>
+                            <div className='text-center' key={item.id}>
+                                <h3 className='text-div-blue underline py-1 font-semibold'>{item.title}</h3>
 
+                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 xl:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
+                                    setShowModal(true);
+                                    setModalData(item);
+                                }} />
+
+                                <span className='text-div-red'>{item.dates}</span>
+
+                                {showModal ? (
+                                    <>
+                                        <div
+                                            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                                        // onClick={() => setShowModal(false)}
+                                        >
+                                            <div className="relative w-auto my-6 mx-2 max-w-3xl">
+                                                {/*content*/}
+                                                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                                    {/*header*/}
+                                                    <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
+                                                        <h2 className="font-semibold text-div-blue font-roboto">
+                                                            {modalData.title}
+                                                        </h2>
+                                                    </div>
+                                                    {/*body*/}
+                                                    <div className="relative px-6 p-4 flex-auto">
+                                                        <p className="my-2 text-gray-800 text-lg leading-relaxed font-roboto">
+                                                            {modalData.description}
+                                                        </p>
+                                                        <div className="flex justify-center">
+                                                            {modalData.technos.map(elt =>
+
+                                                                <div key={elt.id}
+                                                                    className="mx-2 px-2"
+                                                                >
+                                                                    <StyledTooltip title={elt.title} arrow={true}>
+                                                                        <img src={elt.logo} alt={elt.title}
+                                                                            className="w-10 xl:w-12 h-auto"
+                                                                        />
+                                                                    </StyledTooltip>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                        <div className="overflow-auto max-h-44 mx-10 mt-2">
+                                                            <Carousel useKeyboardArrows={true} showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000} showStatus={false}>
+                                                                {modalData.images.slice(1).map(elt =>
+                                                                    <div key={elt.id} className='slide'>
+                                                                        {elt.legend && <h6 className='mb-2 text-div-blue font-semibold'>"{elt.legend}"</h6>}
+                                                                        <img src={elt.src} alt={elt.id} />
+                                                                    </div>
+                                                                )}
+                                                            </Carousel>
+                                                            {/* <img src={modalData.images[1].src} alt={modalData.title} />  */}
+                                                        </div>
+                                                    </div>
+                                                    {/*footer*/}
+                                                    <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
+                                                        {modalData.lien && <a href={modalData.lien} rel="noreferrer"><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
+                                                        <button
+                                                            className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                                                            type="button"
+                                                            onClick={() => setShowModal(false)}
+                                                        >
+                                                            Fermer la fenêtre
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="opacity-25 fixed inset-0 z-40 bg-white"></div>
+                                    </>
+                                ) : null}
+
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );
