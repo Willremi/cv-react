@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Projets from "../components/datas/projetsData";
 import DwwmInfo from "../components/datas/dwwmData";
 import Outils from "../components/datas/outilsData";
-import Interets from '../components/datas/interetsData';
+// import Interets from '../components/datas/interetsData';
 import windows from '../assets/images/logos/windows.png';
 import mac from '../assets/images/logos/macos.png';
 import debian from '../assets/images/logos/debian.png';
 import StyledTooltip from "../components/constants/StyledTooltip";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 
 const Dwwm = () => {
     Projets.sort(function (a, b) {
@@ -18,7 +18,7 @@ const Dwwm = () => {
     const [modalData, setModalData] = useState(null);
 
     return (
-        <div className="container mx-auto">
+        <div className="xl:container xl:mx-auto">
             <div className='flex items-center justify-center mt-20 mb-20'>
                 <div>
                     <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-2'>
@@ -71,13 +71,13 @@ const Dwwm = () => {
                             <div className="border bg-div-white rounded-lg mt-4 p-2 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
-                                <div className="flex flex-wrap xl:flex-nowrap justify-center lg:justify-around">
+                                <div className="flex flex-wrap xl:flex-nowrap justify-center xl:justify-around">
                                     {Outils.map(elt =>
-                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 w-32'>
+                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-20 xl:w-32'>
                                             <StyledTooltip title={elt.name} arrow={true}>
                                                 <img src={elt.logo} alt={elt.name} />
                                             </StyledTooltip>
-                                            <span className={`xl:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
+                                            <span className={`lg:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
                                         </div>
                                     )}
                                 </div>
@@ -93,7 +93,7 @@ const Dwwm = () => {
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className='flex flex-wrap justify-between'>
                                     {DwwmInfo.map(item =>
-                                        <div className={`w-16 md:w-24 text-center mb-4`} key={item.id}>
+                                        <div className={`w-16 md:w-20 xl:w-24 text-center mb-4`} key={item.id}>
                                             <a href={item.href} target='_blank' rel="noreferrer">
                                                 <img src={item.image} alt={item.name} />
                                                 <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
@@ -135,7 +135,7 @@ const Dwwm = () => {
                                                                     </div>
                                                                     {/*body*/}
                                                                     <div className="relative px-6 p-4 flex-auto">
-                                                                        <p className="my-2 text-gray-800 text-lg leading-relaxed font-roboto">
+                                                                        <p className="my-2 text-red-800 text-xl leading-relaxed font-roboto">
                                                                             {modalData.description}
                                                                         </p>
                                                                         <div className="flex justify-center">
