@@ -89,7 +89,7 @@ const Dwwm = () => {
                     <div className="md:flex mx-36 max-w-screen-3xl">
                         <div className="flex-1 min-w-0 mx-2">
                             <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4 w-full">
-                                <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
+                                <h2 className='text-center text-div-blue font-roboto font-semibold'>Langages</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className='flex flex-wrap justify-center'>
                                     {DwwmInfo.map(item =>
