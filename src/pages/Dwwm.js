@@ -18,10 +18,10 @@ const Dwwm = () => {
     const [modalData, setModalData] = useState(null);
 
     return (
-        <div className="xl:container xl:mx-auto">
+        
             <div className='flex items-center justify-center mt-20 mb-20'>
-                <div>
-                    <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-2'>
+                <div className='mx-5  w-full'>
+                    <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-3'>
                         <h1 className='text-center text-div-red font-roboto font-semibold'>Développeur Web</h1>
                     </div>
 
@@ -30,7 +30,7 @@ const Dwwm = () => {
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>À propos de moi</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
                         <div className="m-1">
-                            <p className='font-roboto text-red-600 indent-5 text-xl'>Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.</p>
+                            <p className='font-roboto text-red-600 indent-5 text-lg'>Je suis un développeur web qui aime la simplicité et l'élégance, j'aime créer selon les besoins des clients afin de leur proposer quelque chose au plus proche de leurs attentes. Lors du développement d'un site, je réfléchis d'un point de vue utilisateur afin de créer une interface agréable d'utilisation.</p>
                             {/* <div className="border-t-2 border-div-green my-3 w-1/2 text-center mx-auto"></div>
                         <h2 className='text-center mt-1 text-div-blue font-semibold'>Intérêts</h2>
                         <div className="flex justify-center mt-4">
@@ -48,19 +48,19 @@ const Dwwm = () => {
                     {/* Systèmes exploitation & outils */}
                     <div className="md:flex">
                         <div>
-                            <div className="border bg-div-white rounded-lg mt-4 mx-5 md:ml-36 p-2 xl:w-full">
+                            <div className="border bg-div-white rounded-lg mt-4 md:ml-36 p-2">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className="flex justify-around">
-                                    <div className="w-20 xl:w-18 text-center mx-3 xl:mx-0">
+                                    <div className="w-20 xl:w-16 text-center mx-3 xl:mx-0">
                                         <img src={windows} alt="Logo de Windows" />
                                         <span className='font-roboto text-div-red'>Windows</span>
                                     </div>
-                                    <div className="w-20 xl:w-18 text-center">
+                                    <div className="w-20 xl:w-16 text-center">
                                         <img src={mac} alt="Logo de Mac OS" />
                                         <span className='font-roboto text-div-red'>Mac OS</span>
                                     </div>
-                                    <div className="w-20 xl:w-18 text-center mx-3 xl:mx-0">
+                                    <div className="w-20 xl:w-16 text-center mx-3 xl:mx-0">
                                         <img src={debian} alt="Logo de Debian" />
                                         <span className='font-roboto text-div-red'>Debian</span>
                                     </div>
@@ -68,12 +68,12 @@ const Dwwm = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="border bg-div-white rounded-lg mt-4 p-2 sm:ml-5 md:ml-4 xl:ml-44 mx-5 md:mx-36">
+                            <div className="border bg-div-white rounded-lg mt-4 py-2 sm:ml-5 md:ml-4">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
-                                <div className="flex flex-wrap xl:flex-nowrap justify-center xl:justify-around">
+                                <div className="flex flex-wrap justify-center xl:justify-around">
                                     {Outils.map(elt =>
-                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-20 xl:w-32'>
+                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-16 py-4'>
                                             <StyledTooltip title={elt.name} arrow={true}>
                                                 <img src={elt.logo} alt={elt.name} />
                                             </StyledTooltip>
@@ -91,12 +91,14 @@ const Dwwm = () => {
                             <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4 w-full">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
-                                <div className='flex flex-wrap justify-between'>
+                                <div className='flex flex-wrap justify-center'>
                                     {DwwmInfo.map(item =>
-                                        <div className={`w-16 md:w-20 xl:w-24 text-center mb-4`} key={item.id}>
+                                        <div className={`w-16 md:w-20 text-center mb-4`} key={item.id}>
                                             <a href={item.href} target='_blank' rel="noreferrer">
-                                                <img src={item.image} alt={item.name} />
-                                                <span className='hidden lg:block font-roboto text-div-red'>{item.name}</span>
+                                            <StyledTooltip title={item.name} arrow={true}>
+                                                <img src={item.image} alt={item.name} className="w-16" />
+                                            </StyledTooltip>
+                                                <span className='lg:hidden font-roboto text-div-red text-xs text-center'>{item.name}</span>
                                             </a>
                                         </div>
                                     )}
@@ -189,7 +191,7 @@ const Dwwm = () => {
 
                 </div>
             </div>
-        </div>
+        
     );
 };
 
