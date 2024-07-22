@@ -20,7 +20,7 @@ const Dwwm = () => {
     return (
         
             <div className='flex items-center justify-center mt-20 mb-20'>
-                <div className='mx-5  w-full'>
+                <div className='mx-5 w-full'>
                     <div className='bg-div-white rounded-lg border shadow-lg mx-5 md:mx-36 p-3'>
                         <h1 className='text-center text-div-red font-roboto font-semibold'>Développeur Web</h1>
                     </div>
@@ -46,21 +46,21 @@ const Dwwm = () => {
                     </div>
 
                     {/* Systèmes exploitation & outils */}
-                    <div className="md:flex">
+                    <div className="md:flex md:mx-24 lg:mx-0">
                         <div>
                             <div className="border bg-div-white rounded-lg mt-4 md:ml-36 p-2">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className="flex justify-around">
-                                    <div className="w-20 xl:w-16 text-center mx-3 xl:mx-0">
+                                    <div className="w-20 md:w-14 xl:w-16 text-center mx-3 xl:mx-0">
                                         <img src={windows} alt="Logo de Windows" />
                                         <span className='font-roboto text-div-red'>Windows</span>
                                     </div>
-                                    <div className="w-20 xl:w-16 text-center">
+                                    <div className="w-20 md:w-14 xl:w-16 text-center">
                                         <img src={mac} alt="Logo de Mac OS" />
                                         <span className='font-roboto text-div-red'>Mac OS</span>
                                     </div>
-                                    <div className="w-20 xl:w-16 text-center mx-3 xl:mx-0">
+                                    <div className="w-20 md:w-14 xl:w-16 text-center mx-3 xl:mx-0">
                                         <img src={debian} alt="Logo de Debian" />
                                         <span className='font-roboto text-div-red'>Debian</span>
                                     </div>
@@ -68,12 +68,12 @@ const Dwwm = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="border bg-div-white rounded-lg mt-4 py-2 sm:ml-5 md:ml-16 px-2">
+                            <div className="border bg-div-white rounded-lg mt-4 p-2 sm:ml-5 md:ml-12 xl:ml-16">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className="flex flex-wrap justify-center xl:justify-around">
                                     {Outils.map(elt =>
-                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-14 py-4'>
+                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-12 xl:w-16 py-4'>
                                             <StyledTooltip title={elt.name} arrow={true}>
                                                 <img src={elt.logo} alt={elt.name} />
                                             </StyledTooltip>
