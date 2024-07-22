@@ -114,7 +114,7 @@ const Dwwm = () => {
                                         item =>
                                             <div className='text-center' key={item.id}>
                                                 <h3 className='text-div-blue underline py-1 font-semibold text-lg'>{item.title}</h3>
-                                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-48 mx-auto cursor-pointer" id={item.title} onClick={() => {
+                                                <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
                                                     setShowModal(true);
                                                     setModalData(item);
                                                 }} />
