@@ -68,12 +68,12 @@ const Dwwm = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="border bg-div-white rounded-lg mt-4 py-2 sm:ml-5 md:ml-4">
+                            <div className="border bg-div-white rounded-lg mt-4 py-2 sm:ml-5 md:ml-16 px-2">
                                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                                 <div className="border-t-2 my-4 border-div-green"></div>
                                 <div className="flex flex-wrap justify-center xl:justify-around">
                                     {Outils.map(elt =>
-                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-16 py-4'>
+                                        <div key={elt.id} className='mx-1 mb-4 md:mb-3 xl:mb-0 md:w-14 py-4'>
                                             <StyledTooltip title={elt.name} arrow={true}>
                                                 <img src={elt.logo} alt={elt.name} />
                                             </StyledTooltip>
