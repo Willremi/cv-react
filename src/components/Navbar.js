@@ -58,15 +58,15 @@ const Navbar = () => {
                                 <Link to="/"><img src={rw} alt="RW" className="hidden items-center lg:flex h-18 w-32" /></Link>
                                 <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-between">
                                     <div className="flex-shrink-0 flex items-center">
-                                        <img src={rw} alt="RW" className="block lg:hidden w-32 h-18" />
+                                        <img src={rw} alt="RW" className="block lg:hidden w-32 h-18 py-1" />
                                     </div>
                                     <div className="hidden lg:block sm:ml-6">
                                         <div className="flex space-x-4">
                                             {navigation.map((item) => (
-                                                <div key={item.name} className="relative group">
+                                                <div key={item.name} className="relative group py-2">
                                                     <Link
                                                         to={item.href}
-                                                        className={`text-div-red px-3 py-2 rounded-md text-md font-extrabold font-police hover:bg-div-blue hover:text-white ${classNames(
+                                                        className={`text-div-red px-3 py-2 rounded-md text-xl font-extrabold font-police hover:bg-div-blue hover:text-white ${classNames(
                                                             (location.pathname === item.href) && activeLink
                                                         )}`}
                                                     >
@@ -87,7 +87,7 @@ const Navbar = () => {
                                                     )}
                                                 </div>
                                             ))}
-                                            <p onClick={saveFile} className="text-div-red px-3 py-2 rounded-md text-md font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>
+                                            <p onClick={saveFile} className="text-div-red px-3 py-2 rounded-md text-lg font-bold font-police hover:bg-div-blue hover:text-white">PDF</p>
                                         </div>
                                     </div>
                                 </div>

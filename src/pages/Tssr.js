@@ -53,7 +53,8 @@ const Tssr = () => {
                             <ul>
                                 <li>Windows Server 2016 / 2022</li>
                                 <li>pfSense</li>
-                                <li>Autres distributions Linux</li>
+                                <li>ESXi</li>
+                                <li>Autres distributions Linux (Xivo)</li>
                             </ul>  
                         </div>
                     </div>
