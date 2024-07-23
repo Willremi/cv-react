@@ -53,15 +53,15 @@ const Dwwm = () => {
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
                         <div className="flex justify-around">
-                            <div className="w-20 text-center mx-3 xl:mx-0">
+                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
                                 <img src={windows} alt="Logo de Windows" />
                                 <span className='font-roboto text-div-red'>Windows</span>
                             </div>
-                            <div className="w-20 text-center mx-3 xl:mx-0">
+                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
                                 <img src={mac} alt="Logo de Mac OS" />
                                 <span className='font-roboto text-div-red'>Mac OS</span>
                             </div>
-                            <div className="w-20 text-center mx-3 xl:mx-0">
+                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
                                 <img src={debian} alt="Logo de Debian" />
                                 <span className='font-roboto text-div-red'>Debian</span>
                             </div>
@@ -75,7 +75,7 @@ const Dwwm = () => {
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="flex flex-wrap justify-center xl:justify-around">
                                 {Outils.map(elt => (
-                                    <div key={elt.id} className='mx-3 mb-4 md:mb-3 xl:mb-0 w-20 md:w-12 xl:w-16 py-4'>
+                                    <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 md:w-16 py-2'>
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
