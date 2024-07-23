@@ -49,7 +49,7 @@ const Dwwm = () => {
 
                 <div className="flex flex-wrap -mx-2 px-2">
                     {/* Systèmes exploitation */}
-                    <div className="w-full md:w-1/4 border bg-div-white rounded-lg mt-4 py-2">
+                    <div className="w-full md:w-1/4 border bg-div-white rounded-lg mt-4 p-2">
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
                         <div className="flex justify-around">
