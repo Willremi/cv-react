@@ -11,7 +11,7 @@ const Tssr = () => {
         <div className='flex mx-36 mt-20 mb-20'>
             <div className='flex flex-wrap'>
                 <div className='bg-div-white rounded-lg border shadow-lg p-3 w-full'>
-                    <h1 className='text-center text-div-red font-roboto font-semibold'>Technicien Systemes et Réseaux</h1>
+                    <h1 className='text-center text-div-red font-roboto font-semibold'>Technicien Systèmes et Réseaux</h1>
                 </div>
 
                 {/* À propos de moi */}
