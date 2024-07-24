@@ -73,9 +73,9 @@ const Dwwm = () => {
                         <div className="border bg-div-white rounded-lg mt-4 p-2">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="flex flex-wrap justify-center xl:justify-around">
+                            <div className="flex flex-wrap justify-center">
                                 {Outils.map(elt => (
-                                    <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 md:w-16 py-2'>
+                                    <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 md:w-16 py-2 lg:mx-4'>
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
