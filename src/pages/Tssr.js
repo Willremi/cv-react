@@ -62,7 +62,7 @@ const Tssr = () => {
 
                 {/* Systèmes exploitation & outils */}
                 <div className="flex flex-wrap -mx-2">
-                    <div className="w-full md:w-1/2 px-2">
+                    <div className="w-full md:w-2/3 px-2">
                         <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Technologies informatiques</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
@@ -77,10 +77,19 @@ const Tssr = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 px-2">
+                    <div className="w-full md:w-1/3 px-2">
                         <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
-                        <h2 className='text-center text-div-blue font-roboto font-semibold'>Technologies informatiques</h2>
+                        <h2 className='text-center text-div-blue font-roboto font-semibold'>Applications</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
+                        <div className="flex flex-wrap justify-center">
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DNS</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DHCP</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>VPN</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>HTTP(S)</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>SMTP</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>TCP/IP</div>
+                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>ICMP</div>
+                            </div>
                         </div>
                     </div>
                 </div>
