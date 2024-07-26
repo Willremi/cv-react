@@ -87,7 +87,7 @@ const Tssr = () => {
                                     <img src={mysql} alt="Logo de mysql" />  
                                 </div>
                                 <div className='text-center w-24 mx-2'>
-                                    <img src={ad} alt="Logo d'activeDirectory" />  
+                                    <img src={ad} alt="Logo d'activeDirectory" className='bg-white' />  
                                 </div>
                                 
                             </div>
