@@ -27,7 +27,7 @@ const Tssr = () => {
                     <div className="border-t-2 my-4 border-div-green"></div>
                     <div className="flex justify-around">
                         {osData.map(elt => (
-                            <div key={elt.id} className="w-20 md:w-16 text-center mx-3 xl:mx-0">
+                            <div key={elt.id} className={`w-20 text-center mx-3 xl:mx-0 ${elt.name === 'Windows Server' ? 'md:w-12' : 'md:w-16'}`}>
                             <img src={elt.logo} alt={elt.name} />
                             <span className='font-roboto text-div-red'>{elt.name}</span>
                         </div>
