@@ -3,10 +3,8 @@ import Projets from "../components/datas/projetsData";
 import DwwmInfo from "../components/datas/dwwmData";
 import Outils from "../components/datas/outilsData";
 // import Interets from '../components/datas/interetsData';
-import windows from '../assets/images/logos/windows.png';
-import mac from '../assets/images/logos/macos.png';
-import debian from '../assets/images/logos/debian.png';
 import StyledTooltip from "../components/constants/StyledTooltip";
+import osData from "../components/datas/osData";
 // import { Carousel } from "react-responsive-carousel";
 
 const Dwwm = () => {
@@ -49,31 +47,27 @@ const Dwwm = () => {
 
                 <div className="flex flex-wrap -mx-2 px-2">
                     {/* Systèmes exploitation */}
-                    <div className="w-full md:w-1/4 border bg-div-white rounded-lg mt-4 p-2">
+                    <div className="w-full md:w-1/3 border bg-div-white rounded-lg mt-4 p-2">
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
                         <div className="flex justify-around">
-                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
-                                <img src={windows} alt="Logo de Windows" />
-                                <span className='font-roboto text-div-red'>Windows</span>
-                            </div>
-                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
-                                <img src={mac} alt="Logo de Mac OS" />
-                                <span className='font-roboto text-div-red'>Mac OS</span>
-                            </div>
-                            <div className="w-20 md:w-16 text-center mx-3 xl:mx-0">
-                                <img src={debian} alt="Logo de Debian" />
-                                <span className='font-roboto text-div-red'>Debian</span>
-                            </div>
+                            {osData.map(elt => (
+                                elt.tag !== "tssr" ? (
+                                    <div key={elt.id} className="w-20 md:w-16 text-center mx-3 xl:mx-0">
+                                        <img src={elt.logo} alt={elt.name} />
+                                        <span className='font-roboto text-div-red'>{elt.name}</span>
+                                    </div>
+                                ) : null
+                            ))}
                         </div>
                     </div>
 
                     {/* Outils utilisés */}
-                    <div className="w-full md:w-3/4 px-2">
+                    <div className="w-full md:w-2/3 px-2">
                         <div className="border bg-div-white rounded-lg mt-4 p-2">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="flex flex-wrap justify-center lg:justify-around">
+                            <div className="flex justify-center lg:justify-around">
                                 {Outils.map(elt => (
                                     <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 md:w-16 py-2'>
                                         <StyledTooltip title={elt.name} arrow={true}>
