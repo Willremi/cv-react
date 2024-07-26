@@ -6,6 +6,9 @@ import debian from '../assets/images/logos/debian.png';
 import android from '../assets/images/logos/android.png';
 import esxi from '../assets/images/logos/esxi.png';
 import pfsense from '../assets/images/logos/pfsense.png';
+import TechnoInfo from '../components/datas/technoData.js';
+import mysql from '../assets/images/logos/mysql.png';
+import ad from '../assets/images/logos/activeDirectory.png';
 
 const Tssr = () => {
     return (
@@ -67,28 +70,26 @@ const Tssr = () => {
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Technologies informatiques</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="flex flex-wrap justify-center">
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DNS</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DHCP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>VPN</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>HTTP(S)</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>SMTP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>TCP/IP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>ICMP</div>
+                                {TechnoInfo.map(item => (
+                                    <div className="border rounded-lg bg-yellow-600 p-2 text-white text-center w-20 m-1" key={item.id}>
+                                        {item.name}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
                     <div className="w-full md:w-1/3 px-2">
                         <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
-                        <h2 className='text-center text-div-blue font-roboto font-semibold'>Applications</h2>
-                        <div className="border-t-2 my-4 border-div-green"></div>
-                        <div className="flex flex-wrap justify-center">
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DNS</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>DHCP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>VPN</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>HTTP(S)</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>SMTP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>TCP/IP</div>
-                                <div className='border rounded-lg bg-div-green p-2 text-white text-center w-20 m-1'>ICMP</div>
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>Bases de données</h2>
+                            <div className="border-t-2 my-4 border-div-green"></div>
+                            <div className="flex flex-wrap justify-around">
+                                <div className='text-center w-20 my-1 mx-2'>
+                                    <img src={mysql} alt="Logo de mysql" />  
+                                </div>
+                                <div className='text-center w-24 mx-2'>
+                                    <img src={ad} alt="Logo d'activeDirectory" />  
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
