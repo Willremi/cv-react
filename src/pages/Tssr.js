@@ -28,9 +28,9 @@ const Tssr = () => {
                     <div className="flex justify-around">
                         {osData.map(elt => (
                             <div key={elt.id} className={`w-20 text-center mx-3 xl:mx-0 ${elt.name === 'Windows Server' ? 'md:w-12' : 'md:w-16'}`}>
-                            <img src={elt.logo} alt={elt.name} />
-                            <span className='font-roboto text-div-red'>{elt.name}</span>
-                        </div>
+                                <img src={elt.logo} alt={elt.name} />
+                                <span className='font-roboto text-div-red'>{elt.name}</span>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -56,12 +56,73 @@ const Tssr = () => {
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="flex justify-around">
                                 <div className='text-center w-20 my-1 mx-2'>
-                                    <img src={mysql} alt="Logo de mysql" />  
+                                    <img src={mysql} alt="Logo de mysql" />
                                 </div>
                                 <div className='text-center w-24 mx-2'>
-                                    <img src={ad} alt="Logo d'activeDirectory" className='bg-white' />  
+                                    <img src={ad} alt="Logo d'activeDirectory" className='bg-white' />
                                 </div>
-                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Logiciels */}
+                <div className="bg-div-white rounded-lg border-shadow-lg p-3 mt-4 w-full">
+                    <h2 className='text-center text-div-blue font-roboto font-semibold'>Applications</h2>
+                    <div className="border-t-2 my-4 border-div-green"></div>
+                    <div className="flex justify-center mx-auto">
+                        <div className="w-full md:w-9/12 px-2">
+                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>Microsoft</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex flex-wrap justify-around">
+                                    <div>Teams</div>
+                                    <div>Word</div>
+                                    <div>Excel</div>
+                                    <div>Outlook</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-9/12 px-2">
+                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>Virtualisation</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex flex-wrap justify-around">
+                                    <div>Hyper-V</div>
+                                    <div>VMWare</div>
+                                    <div>Citrix Workspace</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-9/12 px-2">
+                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>PMAD</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex flex-wrap justify-around">
+                                    <div>AnyDesk</div>
+                                    <div>BeyondTrust</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-9/12 px-2">
+                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>Progammation</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex flex-wrap justify-around">
+                                    <div>Terminal</div>
+                                    <div>Powershell</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-9/12 px-2">
+                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>Services</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex flex-wrap justify-around">
+                                    <div>GLPI</div>
+                                    <div>ServiceNow</div>
+                                </div>
                             </div>
                         </div>
                     </div>
