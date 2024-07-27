@@ -6,6 +6,15 @@ import teams from '../assets/images/logos/teams.png';
 import word from '../assets/images/logos/word.png';
 import excel from '../assets/images/logos/excel.png';
 import outlook from '../assets/images/logos/outlook.png';
+
+import vmware from '../assets/images/logos/vmware.png';
+import citrix from '../assets/images/logos/citrix.png';
+
+import anydesk from '../assets/images/logos/anydesk.png';
+import beyondtrust from '../assets/images/logos/beyondtrust.png';
+
+import terminal from '../assets/images/logos/terminal.png';
+
 import osData from '../components/datas/osData.js';
 
 const Tssr = () => {
@@ -82,28 +91,33 @@ const Tssr = () => {
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     <div className='text-center w-20 md:w-16 mx-2'>
-                                    <img src={teams} alt="Logo de Teams" />
+                                        <img src={teams} alt="Logo de Teams" />
                                     </div>
                                     <div className='text-center w-20 md:w-16 mx-2'>
-                                    <img src={word} alt="Logo de Word" />
+                                        <img src={word} alt="Logo de Word" />
                                     </div>
                                     <div className='text-center w-20 md:w-16 mx-2'>
-                                    <img src={excel} alt="Logo de Excel" />
+                                        <img src={excel} alt="Logo de Excel" />
                                     </div>
                                     <div className='text-center w-20 md:w-16 mx-2'>
-                                    <img src={outlook} alt="Logo de Outlook" />
+                                        <img src={outlook} alt="Logo de Outlook" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 px-2">
-                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                            <div className="bg-green-600 rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>Virtualisation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
-                                <div className="flex flex-wrap justify-around">
-                                    <div>VMWare</div>
-                                    <div>Citrix Workspace</div>
-                                    <div>Hyper-V</div>
+                                <div className="flex justify-around">
+                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                        <img src={vmware} alt="Logo de VMWare" />
+                                    </div>
+                                    {/* <div>Citrix Workspace</div> */}
+                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                        <img src={citrix} alt="Logo de Citrix" />
+                                    </div>
+                                    {/* <div>Hyper-V</div> */}
                                 </div>
                             </div>
                         </div>
@@ -111,9 +125,15 @@ const Tssr = () => {
                             <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>PMAD</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
-                                <div className="flex flex-wrap justify-around">
-                                    <div>AnyDesk</div>
-                                    <div>BeyondTrust</div>
+                                <div className="flex justify-around">
+                                    {/* <div>AnyDesk</div> */}
+                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                        <img src={anydesk} alt="Logo d'Anydesk" />
+                                    </div>
+                                    {/* <div>BeyondTrust</div> */}
+                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                        <img src={beyondtrust} alt="Logo de BeyondTrust" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,8 +141,11 @@ const Tssr = () => {
                             <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>Progammation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
-                                <div className="flex flex-wrap justify-around">
-                                    <div>Terminal</div>
+                                <div className="flex justify-around">
+                                    {/* <div>Terminal</div> */}
+                                    <div className='text-center w-20 md:w-16 mx-2'>
+                                        <img src={terminal} alt="Logo de Terminal" />
+                                    </div>
                                     <div>Powershell</div>
                                 </div>
                             </div>
