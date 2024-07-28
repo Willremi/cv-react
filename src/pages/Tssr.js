@@ -14,6 +14,10 @@ import anydesk from '../assets/images/logos/anydesk.png';
 import beyondtrust from '../assets/images/logos/beyondtrust.png';
 
 import terminal from '../assets/images/logos/terminal.png';
+import powershell from '../assets/images/logos/powershell.png';
+
+import glpi from '../assets/images/logos/glpi.png';
+import servicenow from '../assets/images/logos/servicenow.png';
 
 import osData from '../components/datas/osData.js';
 
@@ -85,7 +89,7 @@ const Tssr = () => {
                     <h2 className='text-center text-div-blue font-roboto font-semibold'>Applications</h2>
                     <div className="border-t-2 my-4 border-div-green"></div>
                     <div className="flex justify-center mx-auto">
-                        <div className="w-full md:w-9/12 px-2">
+                        <div className="w-full md:w-1/2 px-2">
                             <div className="bg-yellow-600 rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>Microsoft</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
@@ -121,45 +125,58 @@ const Tssr = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className="w-full md:w-1/2 px-2">
-                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
+                            <div className="bg-violet-800 rounded-lg border shadow-lg p-2 mt-4">
+                                <h3 className='text-center text-div-white font-roboto font-semibold'>Progammation</h3>
+                                <div className="border-t-2 my-4 border-div-red"></div>
+                                <div className="flex justify-around">
+                                    {/* <div>Terminal</div> */}
+                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                        <img src={terminal} alt="Logo de Terminal" className='bg-white' />
+                                    </div>
+                                    {/* <div>Powershell</div> */}
+                                    <div className='text-center w-20 md:w-12 mx-2 bg-white'>
+                                        <img src={powershell} alt="Logo de powershell" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center mx-auto">
+                        <div className="w-full md:w-1/3 px-2">
+                            <div className="bg-div-blue rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>PMAD</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     {/* <div>AnyDesk</div> */}
-                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                    <div className='text-center w-20 md:w-16 mx-2'>
                                         <img src={anydesk} alt="Logo d'Anydesk" />
                                     </div>
                                     {/* <div>BeyondTrust</div> */}
-                                    <div className='text-center w-20 md:w-12 mx-2'>
+                                    <div className='text-center w-20 md:w-16 mx-2'>
                                         <img src={beyondtrust} alt="Logo de BeyondTrust" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2 px-2">
-                            <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>Progammation</h3>
-                                <div className="border-t-2 my-4 border-div-red"></div>
-                                <div className="flex justify-around">
-                                    {/* <div>Terminal</div> */}
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={terminal} alt="Logo de Terminal" />
-                                    </div>
-                                    <div>Powershell</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-full md:w-9/12 px-2">
+                        <div className="w-full md:w-1/3 px-2">
                             <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-div-white font-roboto font-semibold'>Services</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex flex-wrap justify-around">
-                                    <div>GLPI</div>
-                                    <div>ServiceNow</div>
+                                    {/* <div>GLPI</div> */}
+                                    <div className='text-center w-20 md:w-16 mx-2 bg-white'>
+                                        <img src={glpi} alt="Logo de GLPI" />
+                                    </div>
+                                    {/* <div>ServiceNow</div> */}
+                                    <div className='text-center w-20 md:w-16 mx-2 bg-white'>
+                                        <img src={servicenow} alt="Logo de ServiceNow" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
