@@ -91,7 +91,7 @@ const Tssr = () => {
                     <div className="flex justify-center mx-auto">
                         <div className="w-full md:w-1/2 px-2">
                             <div className="bg-yellow-600 rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>Microsoft</h3>
+                                <h3 className='text-center text-white font-roboto font-semibold'>Microsoft</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     <div className='text-center w-20 md:w-16 mx-2'>
@@ -111,7 +111,7 @@ const Tssr = () => {
                         </div>
                         <div className="w-full md:w-1/2 px-2">
                             <div className="bg-green-600 rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>Virtualisation</h3>
+                                <h3 className='text-center text-white font-roboto font-semibold'>Virtualisation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     <div className='text-center w-20 md:w-12 mx-2'>
@@ -128,7 +128,7 @@ const Tssr = () => {
 
                         <div className="w-full md:w-1/2 px-2">
                             <div className="bg-violet-800 rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>Progammation</h3>
+                                <h3 className='text-center text-white font-roboto font-semibold'>Progammation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     {/* <div>Terminal</div> */}
@@ -146,7 +146,7 @@ const Tssr = () => {
                     <div className="flex justify-center mx-auto">
                         <div className="w-full md:w-1/3 px-2">
                             <div className="bg-div-blue rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>PMAD</h3>
+                                <h3 className='text-center text-white font-roboto font-semibold'>Support à distance</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
                                     {/* <div>AnyDesk</div> */}
@@ -162,7 +162,7 @@ const Tssr = () => {
                         </div>
                         <div className="w-full md:w-1/3 px-2">
                             <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
-                                <h3 className='text-center text-div-white font-roboto font-semibold'>Services</h3>
+                                <h3 className='text-center text-white font-roboto font-semibold'>Ticketing</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex flex-wrap justify-around">
                                     {/* <div>GLPI</div> */}
