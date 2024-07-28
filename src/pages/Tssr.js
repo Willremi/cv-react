@@ -144,7 +144,7 @@ const Tssr = () => {
                         </div>
                     </div>
                     <div className="flex justify-center mx-auto">
-                        <div className="w-full md:w-1/3 px-2">
+                        <div className="w-full md:w-1/4 px-2">
                             <div className="bg-div-blue rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-white font-roboto font-semibold'>Support à distance</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
@@ -160,7 +160,7 @@ const Tssr = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full md:w-1/3 px-2">
+                        <div className="w-full md:w-1/4 px-2">
                             <div className="bg-div-blueClar rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-white font-roboto font-semibold'>Ticketing</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
