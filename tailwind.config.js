@@ -20,6 +20,7 @@ module.exports = {
           'blueOp': 'rgb(51,101,138, 0.8)',
           'green': 'rgb(0,127,102)',
           'red': '#FF0000',
+          'violet': '#BE68BE'
         }
       },
       fontFamily: {

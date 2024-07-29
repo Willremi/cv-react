@@ -2,6 +2,7 @@ import React from 'react';
 import TechnoInfo from '../components/datas/technoData.js';
 import mysql from '../assets/images/logos/mysql.png';
 import ad from '../assets/images/logos/activeDirectory.png';
+
 import teams from '../assets/images/logos/teams.png';
 import word from '../assets/images/logos/word.png';
 import excel from '../assets/images/logos/excel.png';
@@ -127,7 +128,7 @@ const Tssr = () => {
                         </div>
 
                         <div className="w-full md:w-1/2 px-2">
-                            <div className="bg-violet-800 rounded-lg border shadow-lg p-2 mt-4">
+                            <div className="bg-div-violet rounded-lg border shadow-lg p-2 mt-4">
                                 <h3 className='text-center text-white font-roboto font-semibold'>Progammation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
