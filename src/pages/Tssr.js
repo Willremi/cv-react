@@ -2,25 +2,8 @@ import React from 'react';
 import TechnoInfo from '../components/datas/technoData.js';
 import mysql from '../assets/images/logos/mysql.png';
 import ad from '../assets/images/logos/activeDirectory.png';
-
-import teams from '../assets/images/logos/teams.png';
-import word from '../assets/images/logos/word.png';
-import excel from '../assets/images/logos/excel.png';
-import outlook from '../assets/images/logos/outlook.png';
-
-import vmware from '../assets/images/logos/vmware.png';
-import citrix from '../assets/images/logos/citrix.png';
-
-import anydesk from '../assets/images/logos/anydesk.png';
-import beyondtrust from '../assets/images/logos/beyondtrust.png';
-
-import terminal from '../assets/images/logos/terminal.png';
-import powershell from '../assets/images/logos/powershell.png';
-
-import glpi from '../assets/images/logos/glpi.png';
-import servicenow from '../assets/images/logos/servicenow.png';
-
 import osData from '../components/datas/osData.js';
+import appliData from '../components/datas/appliData.js';
 
 const Tssr = () => {
     return (
@@ -95,18 +78,13 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Microsoft</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={teams} alt="Logo de Teams" />
-                                    </div>
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={word} alt="Logo de Word" />
-                                    </div>
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={excel} alt="Logo de Excel" />
-                                    </div>
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={outlook} alt="Logo de Outlook" />
-                                    </div>
+                                    {appliData.map(elt => (
+                                        elt.tag === "microsoft" ? (
+                                            <div className="text-center w-20 md:w-16 mx-2">
+                                                <img src={elt.logo} alt={elt.name} />
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -115,14 +93,13 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Virtualisation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                    <div className='text-center w-20 md:w-12 mx-2'>
-                                        <img src={vmware} alt="Logo de VMWare" />
-                                    </div>
-                                    {/* <div>Citrix Workspace</div> */}
-                                    <div className='text-center w-20 md:w-12 mx-2'>
-                                        <img src={citrix} alt="Logo de Citrix" />
-                                    </div>
-                                    {/* <div>Hyper-V</div> */}
+                                {appliData.map(elt => (
+                                        elt.tag === "virtualisation" ? (
+                                            <div className="text-center w-20 md:w-12 mx-2">
+                                                <img src={elt.logo} alt={elt.name} />
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -132,14 +109,13 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Progammation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                    {/* <div>Terminal</div> */}
-                                    <div className='text-center w-20 md:w-12 mx-2'>
-                                        <img src={terminal} alt="Logo de Terminal" className='bg-white' />
-                                    </div>
-                                    {/* <div>Powershell</div> */}
-                                    <div className='text-center w-20 md:w-12 mx-2 bg-white'>
-                                        <img src={powershell} alt="Logo de powershell" />
-                                    </div>
+                                {appliData.map(elt => (
+                                        elt.tag === "programmation" ? (
+                                            <div className="text-center w-20 md:w-12 mx-2 bg-white">
+                                                <img src={elt.logo} alt={elt.name} />
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -150,14 +126,13 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Support à distance</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                    {/* <div>AnyDesk</div> */}
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={anydesk} alt="Logo d'Anydesk" />
-                                    </div>
-                                    {/* <div>BeyondTrust</div> */}
-                                    <div className='text-center w-20 md:w-16 mx-2'>
-                                        <img src={beyondtrust} alt="Logo de BeyondTrust" />
-                                    </div>
+                                {appliData.map(elt => (
+                                        elt.tag === "pmad" ? (
+                                            <div className="text-center w-20 md:w-12 mx-2">
+                                                <img src={elt.logo} alt={elt.name} />
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -166,14 +141,13 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Ticketing</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex flex-wrap justify-around">
-                                    {/* <div>GLPI</div> */}
-                                    <div className='text-center w-20 md:w-16 mx-2 bg-white'>
-                                        <img src={glpi} alt="Logo de GLPI" />
-                                    </div>
-                                    {/* <div>ServiceNow</div> */}
-                                    <div className='text-center w-20 md:w-16 mx-2 bg-white'>
-                                        <img src={servicenow} alt="Logo de ServiceNow" />
-                                    </div>
+                                {appliData.map(elt => (
+                                        elt.tag === "ticketing" ? (
+                                            <div className="text-center w-20 md:w-12 mx-2 bg-white">
+                                                <img src={elt.logo} alt={elt.name} />
+                                            </div>
+                                        ) : null
+                                    ))}
                                 </div>
                             </div>
                         </div>
