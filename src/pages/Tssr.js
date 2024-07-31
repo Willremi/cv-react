@@ -4,6 +4,7 @@ import mysql from '../assets/images/logos/mysql.png';
 import ad from '../assets/images/logos/activeDirectory.png';
 import osData from '../components/datas/osData.js';
 import appliData from '../components/datas/appliData.js';
+import StyledTooltip from '../components/constants/StyledTooltip';
 
 const Tssr = () => {
     return (
@@ -80,8 +81,10 @@ const Tssr = () => {
                                 <div className="flex justify-around">
                                     {appliData.map(elt => (
                                         elt.tag === "microsoft" ? (
-                                            <div className="text-center w-20 md:w-16 mx-2">
-                                                <img src={elt.logo} alt={elt.name} />
+                                            <div className="text-center w-20 md:w-16 mx-2" key={elt.id}>
+                                                <StyledTooltip title={elt.name} arrow={true}>
+                                                    <img src={elt.logo} alt={elt.name} />
+                                                </StyledTooltip>
                                             </div>
                                         ) : null
                                     ))}
@@ -93,10 +96,12 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Virtualisation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                {appliData.map(elt => (
+                                    {appliData.map(elt => (
                                         elt.tag === "virtualisation" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2">
-                                                <img src={elt.logo} alt={elt.name} />
+                                            <div className="text-center w-20 md:w-12 mx-2" key={elt.id}>
+                                                <StyledTooltip title={elt.name} arrow={true}>
+                                                    <img src={elt.logo} alt={elt.name} />
+                                                </StyledTooltip>
                                             </div>
                                         ) : null
                                     ))}
@@ -109,10 +114,12 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Progammation</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                {appliData.map(elt => (
+                                    {appliData.map(elt => (
                                         elt.tag === "programmation" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2 bg-white">
-                                                <img src={elt.logo} alt={elt.name} />
+                                            <div className="text-center w-20 md:w-12 mx-2 bg-white" key={elt.id}>
+                                                <StyledTooltip title={elt.name} arrow={true}>
+                                                    <img src={elt.logo} alt={elt.name} />
+                                                </StyledTooltip>
                                             </div>
                                         ) : null
                                     ))}
@@ -126,10 +133,12 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Support à distance</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex justify-around">
-                                {appliData.map(elt => (
+                                    {appliData.map(elt => (
                                         elt.tag === "pmad" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2">
-                                                <img src={elt.logo} alt={elt.name} />
+                                            <div className="text-center w-20 md:w-12 mx-2" key={elt.id}>
+                                                <StyledTooltip title={elt.name} arrow={true}>
+                                                    <img src={elt.logo} alt={elt.name} />
+                                                </StyledTooltip>
                                             </div>
                                         ) : null
                                     ))}
@@ -141,10 +150,12 @@ const Tssr = () => {
                                 <h3 className='text-center text-white font-roboto font-semibold'>Ticketing</h3>
                                 <div className="border-t-2 my-4 border-div-red"></div>
                                 <div className="flex flex-wrap justify-around">
-                                {appliData.map(elt => (
+                                    {appliData.map(elt => (
                                         elt.tag === "ticketing" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2 bg-white">
-                                                <img src={elt.logo} alt={elt.name} />
+                                            <div className="text-center w-20 md:w-12 mx-2 bg-white" key={elt.id}>
+                                                <StyledTooltip title={elt.name} arrow={true}>
+                                                    <img src={elt.logo} alt={elt.name} />
+                                                </StyledTooltip>
                                             </div>
                                         ) : null
                                     ))}
