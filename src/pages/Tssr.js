@@ -43,9 +43,9 @@ const Tssr = () => {
                         <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Technologies informatiques</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="flex flex-wrap justify-center">
+                            <div className="flex justify-center">
                                 {TechnoInfo.map(item => (
-                                    <div className="border rounded-lg bg-div-blueClar p-2 text-white text-center w-20 m-1" key={item.id}>
+                                    <div className="border rounded-lg bg-div-blueClar p-2 text-white text-center w-20 md:w-16 m-1" key={item.id}>
                                         {item.name}
                                     </div>
                                 ))}
@@ -57,10 +57,10 @@ const Tssr = () => {
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Bases de données</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
                             <div className="flex justify-around">
-                                <div className='text-center w-20 my-1 mx-2'>
+                                <div className='text-center w-20 md:w-16 my-1 mx-2'>
                                     <img src={mysql} alt="Logo de mysql" />
                                 </div>
-                                <div className='text-center w-24 mx-2'>
+                                <div className='text-center w-24 md:w-16 mx-2'>
                                     <img src={ad} alt="Logo d'activeDirectory" className='bg-white' />
                                 </div>
 
