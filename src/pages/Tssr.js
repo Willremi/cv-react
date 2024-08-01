@@ -98,7 +98,7 @@ const Tssr = () => {
                                 <div className="flex justify-around">
                                     {appliData.map(elt => (
                                         elt.tag === "virtualisation" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2" key={elt.id}>
+                                            <div className="text-center w-20 md:w-12 m-2" key={elt.id}>
                                                 <StyledTooltip title={elt.name} arrow={true}>
                                                     <img src={elt.logo} alt={elt.name} />
                                                 </StyledTooltip>
@@ -116,7 +116,7 @@ const Tssr = () => {
                                 <div className="flex justify-around">
                                     {appliData.map(elt => (
                                         elt.tag === "programmation" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2 bg-white" key={elt.id}>
+                                            <div className="text-center w-20 md:w-12 m-2 bg-white" key={elt.id}>
                                                 <StyledTooltip title={elt.name} arrow={true}>
                                                     <img src={elt.logo} alt={elt.name} />
                                                 </StyledTooltip>
@@ -135,9 +135,9 @@ const Tssr = () => {
                                 <div className="flex justify-around">
                                     {appliData.map(elt => (
                                         elt.tag === "pmad" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2" key={elt.id}>
+                                            <div className="text-center w-20 md:w-12 m-2" key={elt.id}>
                                                 <StyledTooltip title={elt.name} arrow={true}>
-                                                    <img src={elt.logo} alt={elt.name} />
+                                                    <img src={elt.logo} alt={elt.name} className={`${elt.name === "BeyondTrust" ? 'bg-white' : null}`} />
                                                 </StyledTooltip>
                                             </div>
                                         ) : null
@@ -152,7 +152,7 @@ const Tssr = () => {
                                 <div className="flex flex-wrap justify-around">
                                     {appliData.map(elt => (
                                         elt.tag === "ticketing" ? (
-                                            <div className="text-center w-20 md:w-12 mx-2 bg-white" key={elt.id}>
+                                            <div className="text-center w-20 md:w-12 m-2 bg-white" key={elt.id}>
                                                 <StyledTooltip title={elt.name} arrow={true}>
                                                     <img src={elt.logo} alt={elt.name} />
                                                 </StyledTooltip>
