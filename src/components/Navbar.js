@@ -73,12 +73,12 @@ const Navbar = () => {
                                                         {item.name}
                                                     </Link>
                                                     {item.submenu && (
-                                                        <div className="absolute left-0 hidden mt-2 bg-white shadow-lg group-hover:block">
+                                                        <div className="absolute left-0 hidden mt-2 navBar shadow-lg group-hover:block">
                                                             {item.submenu.map((subitem) => (
                                                                 <Link
                                                                     key={subitem.name}
                                                                     to={subitem.href}
-                                                                    className="block px-4 py-2 text-sm text-div-red hover:bg-div-blue hover:text-white"
+                                                                    className="block px-4 py-2 text-sm text-div-red hover:bg-div-blue hover:text-white font-police font-extrabold"
                                                                 >
                                                                     {subitem.name}
                                                                 </Link>
