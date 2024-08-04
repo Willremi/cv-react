@@ -47,7 +47,7 @@ const Dwwm = () => {
 
                 <div className="flex flex-wrap -mx-2 px-2">
                     {/* Systèmes exploitation */}
-                    <div className="w-full md:w-1/3 border bg-div-white rounded-lg mt-4 p-2">
+                    <div className="w-full lg:w-1/3 border bg-div-white rounded-lg mt-4 p-2">
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
                         <div className="border-t-2 my-4 border-div-green"></div>
                         <div className="flex justify-around">
@@ -63,17 +63,17 @@ const Dwwm = () => {
                     </div>
 
                     {/* Outils utilisés */}
-                    <div className="w-full md:w-2/3 px-2">
+                    <div className="w-full lg:w-2/3 px-2">
                         <div className="border bg-div-white rounded-lg mt-4 p-2">
                             <h2 className='text-center text-div-blue font-roboto font-semibold'>Outils utilisés</h2>
                             <div className="border-t-2 my-4 border-div-green"></div>
-                            <div className="flex justify-center lg:justify-around">
+                            <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-around">
                                 {Outils.map(elt => (
-                                    <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 md:w-16 py-2'>
+                                    <div key={elt.id} className='mb-4 md:mb-3 xl:mb-0 w-20 lg:w-16 p-2 lg:px-0'>
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
-                                        <span className={`lg:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
+                                        <span className={`md:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
                                     </div>
                                 ))}
                             </div>
@@ -85,18 +85,18 @@ const Dwwm = () => {
                 {/* Langage web & projets */}
     <div className="flex flex-wrap -mx-2">
         {/* Langages (6 colonnes sur 12) */}
-        <div className="w-full md:w-1/2 px-2">
+        <div className="w-full lg:w-1/2 px-2">
             <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Langages</h2>
                 <div className="border-t-2 my-4 border-div-green"></div>
                 <div className='flex flex-wrap justify-center'>
                     {DwwmInfo.map(item => (
-                        <div className="w-16 md:w-20 text-center mb-4" key={item.id}>
+                        <div className="w-20 text-center mb-4 px-2 lg:px-0" key={item.id}>
                             <a href={item.href} target='_blank' rel="noreferrer">
                                 <StyledTooltip title={item.name} arrow={true}>
                                     <img src={item.image} alt={item.name} className="w-16" />
                                 </StyledTooltip>
-                                <span className='lg:hidden font-roboto text-div-red text-xs text-center'>{item.name}</span>
+                                <span className='md:hidden font-roboto text-div-red text-xs text-center'>{item.name}</span>
                             </a>
                         </div>
                     ))}
@@ -104,7 +104,7 @@ const Dwwm = () => {
             </div>
         </div>
         {/* Projets (6 colonnes sur 12) */}
-        <div className="w-full md:w-1/2 px-2">
+        <div className="w-full lg:w-1/2 px-2">
             <div className="bg-div-white rounded-lg border shadow-lg mt-4 p-2">
                 <h2 className='text-center text-div-blue font-roboto font-semibold'>Projets</h2>
                 <div className="border-t-2 my-4 border-div-green"></div>
