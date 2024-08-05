@@ -17,9 +17,9 @@ const Dwwm = () => {
 
     return (
 
-        <div className='flex mt-20 mb-20 mx-36'>
+        <div className='flex mt-20 mb-20 md:mx-36'>
             <div>
-                <div className='flex flex-wrap'>
+                <div className='flex flex-wrap w-9/12 mx-6 md:mx-0 md:w-full'>
                     <div className='bg-div-white rounded-lg border shadow-lg p-3 w-full'>
                         <h1 className='text-center text-div-red font-roboto font-semibold'>Développeur Web</h1>
                     </div>
@@ -45,7 +45,7 @@ const Dwwm = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-wrap -mx-2 px-2">
+                <div className="flex flex-wrap mx-2 md:-mx-2 px-2 w-10/12 md:w-full">
                     {/* Systèmes exploitation */}
                     <div className="w-full lg:w-1/3 border bg-div-white rounded-lg mt-4 p-2">
                         <h2 className='text-center text-div-blue font-roboto font-semibold'>Systèmes d'exploitation</h2>
@@ -73,7 +73,7 @@ const Dwwm = () => {
                                         <StyledTooltip title={elt.name} arrow={true}>
                                             <img src={elt.logo} alt={elt.name} />
                                         </StyledTooltip>
-                                        <span className={`md:hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
+                                        <span className={`hidden mx-3 ${(elt.name === "Git") && "ml-6 md:ml-8"} font-roboto text-div-red`}>{elt.name}</span>
                                     </div>
                                 ))}
                             </div>
@@ -81,90 +81,90 @@ const Dwwm = () => {
                     </div>
                 </div>
 
-                
+
                 {/* Langage web & projets */}
-    <div className="flex flex-wrap -mx-2">
-        {/* Langages (6 colonnes sur 12) */}
-        <div className="w-full lg:w-1/2 px-2">
-            <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
-                <h2 className='text-center text-div-blue font-roboto font-semibold'>Langages</h2>
-                <div className="border-t-2 my-4 border-div-green"></div>
-                <div className='flex flex-wrap justify-center'>
-                    {DwwmInfo.map(item => (
-                        <div className="w-20 text-center mb-4 px-2 lg:px-0" key={item.id}>
-                            <a href={item.href} target='_blank' rel="noreferrer">
-                                <StyledTooltip title={item.name} arrow={true}>
-                                    <img src={item.image} alt={item.name} className="w-16" />
-                                </StyledTooltip>
-                                <span className='md:hidden font-roboto text-div-red text-xs text-center'>{item.name}</span>
-                            </a>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-        {/* Projets (6 colonnes sur 12) */}
-        <div className="w-full lg:w-1/2 px-2">
-            <div className="bg-div-white rounded-lg border shadow-lg mt-4 p-2">
-                <h2 className='text-center text-div-blue font-roboto font-semibold'>Projets</h2>
-                <div className="border-t-2 my-4 border-div-green"></div>
-                <div className='flex flex-wrap justify-around'>
-                    {Projets.map(item => (
-                        <div className='text-center' key={item.id}>
-                            <h3 className='text-div-blue underline py-1 font-semibold text-lg'>{item.title}</h3>
-                            <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
-                                setShowModal(true);
-                                setModalData(item);
-                            }} />
-                            <span className='text-div-red text-sm'>{item.dates}</span>
-                            {showModal && (
-                                <>
-                                    <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-                                        <div className="relative w-auto my-6 mx-2 max-w-3xl">
-                                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                                                <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
-                                                    <h2 className="font-semibold text-div-blue font-roboto">
-                                                        {modalData.title}
-                                                    </h2>
-                                                </div>
-                                                <div className="relative px-6 p-4 flex-auto">
-                                                    <p className="my-2 text-red-800 text-xl leading-relaxed font-roboto">
-                                                        {modalData.description}
-                                                    </p>
-                                                    <div className="flex justify-center">
-                                                        {modalData.technos.map(elt => (
-                                                            <div key={elt.id} className="mx-2 px-2">
-                                                                <StyledTooltip title={elt.title} arrow={true}>
-                                                                    <img src={elt.logo} alt={elt.title} className="w-10 xl:w-12 h-auto" />
-                                                                </StyledTooltip>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                    <div className="overflow-auto max-h-44 mx-10 mt-2">
-                                                        <img src={modalData.images[1].src} alt={modalData.title} />
-                                                    </div>
-                                                </div>
-                                                <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
-                                                    {modalData.lien && <a href={modalData.lien} rel="noreferrer"><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
-                                                    <button
-                                                        className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
-                                                        type="button"
-                                                        onClick={() => setShowModal(false)}
-                                                    >
-                                                        Fermer la fenêtre
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                <div className="flex flex-wrap mx-2 md:-mx-2 w-10/12 md:w-full">
+                    {/* Langages (6 colonnes sur 12) */}
+                    <div className="w-full lg:w-1/2 px-2">
+                        <div className="bg-div-white rounded-lg border shadow-lg p-2 mt-4">
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>Langages</h2>
+                            <div className="border-t-2 my-4 border-div-green"></div>
+                            <div className='flex flex-wrap justify-center'>
+                                {DwwmInfo.map(item => (
+                                    <div className="w-20 text-center mb-4 px-2 lg:px-0" key={item.id}>
+                                        <a href={item.href} target='_blank' rel="noreferrer">
+                                            <StyledTooltip title={item.name} arrow={true}>
+                                                <img src={item.image} alt={item.name} className="w-16" />
+                                            </StyledTooltip>
+                                            <span className='hidden font-roboto text-div-red text-xs text-center'>{item.name}</span>
+                                        </a>
                                     </div>
-                                </>
-                            )}
+                                ))}
+                            </div>
                         </div>
-                    ))}
+                    </div>
+                    {/* Projets (6 colonnes sur 12) */}
+                    <div className="w-full lg:w-1/2 px-2">
+                        <div className="bg-div-white rounded-lg border shadow-lg mt-4 p-2">
+                            <h2 className='text-center text-div-blue font-roboto font-semibold'>Projets</h2>
+                            <div className="border-t-2 my-4 border-div-green"></div>
+                            <div className='flex flex-wrap justify-around'>
+                                {Projets.map(item => (
+                                    <div className='text-center' key={item.id}>
+                                        <h3 className='text-div-blue underline py-1 font-semibold text-lg'>{item.title}</h3>
+                                        <img src={item.images[0].src} alt={item.title} className="w-40 sm:w-56 md:w-40 mx-auto cursor-pointer" id={item.title} onClick={() => {
+                                            setShowModal(true);
+                                            setModalData(item);
+                                        }} />
+                                        <span className='text-div-red text-sm'>{item.dates}</span>
+                                        {showModal && (
+                                            <>
+                                                <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                                                    <div className="relative w-auto my-6 mx-2 max-w-3xl">
+                                                        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                                            <div className="flex items-start justify-between p-4 border-b border-solid border-div-green mx-4 rounded-t">
+                                                                <h2 className="font-semibold text-div-blue font-roboto">
+                                                                    {modalData.title}
+                                                                </h2>
+                                                            </div>
+                                                            <div className="relative px-6 p-4 flex-auto">
+                                                                <p className="my-2 text-red-800 text-xl leading-relaxed font-roboto">
+                                                                    {modalData.description}
+                                                                </p>
+                                                                <div className="flex justify-center">
+                                                                    {modalData.technos.map(elt => (
+                                                                        <div key={elt.id} className="mx-2 px-2">
+                                                                            <StyledTooltip title={elt.title} arrow={true}>
+                                                                                <img src={elt.logo} alt={elt.title} className="w-10 xl:w-12 h-auto" />
+                                                                            </StyledTooltip>
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                                <div className="overflow-auto max-h-44 mx-10 mt-2">
+                                                                    <img src={modalData.images[1].src} alt={modalData.title} />
+                                                                </div>
+                                                            </div>
+                                                            <div className={`flex items-center p-4 mx-4 border-t border-solid border-div-green rounded-b ${(!modalData.lien) ? 'justify-end' : 'justify-between'}`}>
+                                                                {modalData.lien && <a href={modalData.lien} rel="noreferrer"><button className='uppercase text-div-blue font-bold text-sm'>Visiter le site</button></a>}
+                                                                <button
+                                                                    className="text-red-500 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                                                                    type="button"
+                                                                    onClick={() => setShowModal(false)}
+                                                                >
+                                                                    Fermer la fenêtre
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
 
 
