@@ -37,7 +37,7 @@ const osData = [
     },
     {
         id: 7,
-        name: "ESXi",
+        name: "pfSense",
         logo: require('../../assets/images/logos/pfsense.png'),
         tag: 'tssr'
     },
