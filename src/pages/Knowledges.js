@@ -13,7 +13,7 @@ const Knowledges = () => {
                 <div className="flex justify-center mx-auto">
                 <div className='bg-div-white rounded-lg border-shadow-lg p-3 mt-4 w-1/2 mx-2'>
                     <h2 className='text-center text-div-blue font-roboto font-semibold'>Développeur Web et Web Mobile</h2>
-                    <div className="border-t-2 my-4 border-div-red"></div>
+                    <div className="border-t-2 my-2 border-div-red"></div>
                     <ul className='list-disc ml-6 text-lg text-div-green font-semibold'>
                         <li>Analyser les besoins du client</li>
                         <li>Concevoir une maquette de présentation</li>
@@ -22,16 +22,17 @@ const Knowledges = () => {
                         <li>Planifier les étapes d’un projet</li>
                         <li>Présenter un produit fini</li>
                     </ul>
-                    <h3 className='text-div-blue font-roboto font-semibold mt-1'>Langages :</h3>
+                    <h3 className='text-div-blue font-roboto font-semibold mt-1 underline underline-offset-4 decoration-red-600'>Langages :</h3>
                     {/* mettre langage de dwwmData*/}
-                    <div>
+                    <div className='text-div-green roboto font-semibold mt-1'>
                         {DwwmInfo.slice(0, 10).map((elt, index) => (
                             <span>{elt.name}{index < 9 && ' / '}</span>
-                        ))}
+                        ))}...
                     </div>
                 </div>
                 <div className='bg-div-white rounded-lg border-shadow-lg p-3 mt-4 w-1/2 mx-2'>
                     <h2 className='text-center text-div-blue font-roboto font-semibold'>Technicien Supérieur Systèmes et Réseaux</h2>
+                    <div className="border-t-2 my-2 border-div-red"></div>
                 </div>
                 </div>
             </div>
